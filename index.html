@@ -179,17 +179,46 @@
   .cls-link { font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--terracotta); text-decoration:none; border-bottom:1px solid var(--terracotta); padding-bottom:1px; transition:all 0.3s; }
   .cls-link:hover { color:var(--deep); border-color:var(--deep); }
 
-  /* ══ 槓桿收入：MEMBERSHIP ══ */
+  /* ══ 直播課程 LIVE ══ */
+  #live { background:var(--deep); }
+  #live h2 { color:white; }
+  #live .lead { color:rgba(255,255,255,0.55); max-width:580px; }
+  .live-hero { display:grid; grid-template-columns:1.1fr 0.9fr; gap:3.5rem; margin-top:3.5rem; align-items:start; }
+  .live-screen { position:relative; aspect-ratio:16/9; background:linear-gradient(135deg,#1E3828,#0D2010); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .live-screen::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 50% at 50% 50%, rgba(122,140,114,0.15) 0%, transparent 70%); }
+  .live-dot { position:absolute; top:1rem; left:1rem; display:flex; align-items:center; gap:0.5rem; background:rgba(0,0,0,0.5); padding:0.3rem 0.7rem; }
+  .live-dot::before { content:''; width:7px; height:7px; border-radius:50%; background:#FF4444; animation:pulse 1.5s ease-in-out infinite; }
+  .live-dot-text { font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.7); }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+  .live-play-btn { width:72px; height:72px; background:rgba(255,255,255,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; border:2px solid rgba(255,255,255,0.4); position:relative; z-index:1; cursor:pointer; transition:all 0.3s; }
+  .live-play-btn::after { content:'▶'; color:white; font-size:1.3rem; margin-left:5px; }
+  .live-play-btn:hover { background:var(--terracotta); border-color:var(--terracotta); transform:scale(1.08); }
+  .live-viewer-count { position:absolute; bottom:1rem; right:1rem; font-size:0.68rem; color:rgba(255,255,255,0.5); letter-spacing:0.06em; }
+  .live-schedule { display:flex; flex-direction:column; gap:1rem; }
+  .live-schedule-title { font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--sage-light); margin-bottom:0.5rem; }
+  .live-slot { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); padding:1.2rem 1.4rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; transition:border-color 0.3s; cursor:pointer; }
+  .live-slot:hover { border-color:rgba(196,120,90,0.4); }
+  .live-slot.next { border-color:var(--terracotta); background:rgba(196,120,90,0.06); }
+  .slot-left { display:flex; flex-direction:column; gap:0.25rem; }
+  .slot-day { font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--sage-light); }
+  .slot-title { font-family:var(--serif); font-size:1rem; color:white; }
+  .slot-time { font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:0.1rem; }
+  .slot-right { display:flex; flex-direction:column; align-items:flex-end; gap:0.3rem; }
+  .slot-price { font-family:var(--serif); font-size:1.1rem; color:var(--terracotta); }
+  .slot-join { font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--terracotta); border:1px solid rgba(196,120,90,0.5); padding:0.25rem 0.65rem; transition:all 0.3s; white-space:nowrap; }
+  .slot-join:hover, .live-slot.next .slot-join { background:var(--terracotta); color:white; }
+  .live-note { margin-top:1.2rem; font-size:0.78rem; color:rgba(255,255,255,0.35); line-height:1.7; }
+  .live-cta-row { margin-top:2.5rem; display:flex; gap:1rem; flex-wrap:wrap; }
+  .btn-live { display:inline-flex; align-items:center; gap:0.6rem; background:var(--terracotta); color:white; padding:1rem 2rem; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; border:none; cursor:pointer; font-family:var(--sans); text-decoration:none; transition:background 0.3s; }
+  .btn-live::before { content:''; width:8px; height:8px; border-radius:50%; background:white; animation:pulse 1.5s ease-in-out infinite; flex-shrink:0; }
+  .btn-live:hover { background:#a8644a; }
+  .btn-live-ghost { display:inline-flex; align-items:center; gap:0.6rem; border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.65); padding:1rem 2rem; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; font-family:var(--sans); text-decoration:none; background:transparent; transition:all 0.3s; }
+  .btn-live-ghost:hover { border-color:var(--terracotta); color:var(--terracotta); }
+
+  /* ══ 方案 MEMBERSHIP ══ */
   #membership { background:var(--deep); }
   #membership h2 { color:white; }
   #membership .lead { color:rgba(255,255,255,0.55); max-width:600px; }
-  .leverage-explain { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin:3rem 0 3.5rem; }
-  .lev-item { padding:1.6rem; border:1px solid rgba(255,255,255,0.07); position:relative; }
-  .lev-item.active { border-color:var(--terracotta); background:rgba(196,120,90,0.06); }
-  .lev-badge { font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--terracotta); margin-bottom:0.7rem; }
-  .lev-title { font-family:var(--serif); font-size:1.1rem; color:white; margin-bottom:0.4rem; }
-  .lev-desc { font-size:0.8rem; line-height:1.7; color:rgba(255,255,255,0.45); }
-  .lev-arrow { display:block; text-align:center; color:rgba(255,255,255,0.18); font-size:1.5rem; }
 
   .plans3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1.6rem; margin-top:2rem; }
   .plan { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); padding:2rem 1.8rem; position:relative; transition:transform 0.3s,box-shadow 0.3s; }
@@ -396,7 +425,7 @@
     .hero-left{padding:5rem 3rem;}
     .stats{grid-template-columns:repeat(2,1fr);padding:2.5rem 3rem;}
     .cards3,.vids3,.prod3,.plans3{grid-template-columns:repeat(2,1fr);}
-    .leverage-explain{grid-template-columns:1fr;}
+    .live-hero{grid-template-columns:1fr;}
     #booking{grid-template-columns:1fr;gap:3rem;}
     .fgrid{grid-template-columns:1fr 1fr;gap:2rem;}
     .cta-band{flex-direction:column;text-align:center;padding:4rem 3rem;}
@@ -423,10 +452,10 @@
 <nav aria-label="主導航">
   <a href="#" class="logo" aria-label="流動瑜伽首頁">流動 <span>Yoga</span></a>
   <ul class="nav-links">
-    <li><a href="#classes">我的課程</a></li>
-    <li><a href="#membership">會員方案</a></li>
-    <li><a href="#online">線上課程</a></li>
-    <li><a href="#testimonials">學生心聲</a></li>
+    <li><a href="#classes">實體課程</a></li>
+    <li><a href="#live">線上直播</a></li>
+    <li><a href="#online">錄播課程</a></li>
+    <li><a href="#membership">方案價格</a></li>
     <li><a href="#booking" class="nav-cta">立即預約</a></li>
   </ul>
 </nav>
@@ -545,29 +574,83 @@
   </div>
 </section>
 
-<!-- ══ 槓桿：MEMBERSHIP 方案 ══ -->
-<section id="membership" aria-label="會員方案與收入模式">
-  <div class="tag">選擇你的方式</div>
-  <h2>不只是<em>一堂課的錢</em></h2>
-  <p class="lead">一堂教一堂收入，不是唯一的方式。以下三種模式，讓你的瑜伽習慣更有效率、老師也能建立穩定收入。</p>
+<!-- ══ 直播課程 ══ -->
+<section id="live" aria-label="直播課程">
+  <div class="tag">線上直播課程</div>
+  <h2>在家也能跟著<em>老師練習</em></h2>
+  <p class="lead">不在台北？行程太滿？直播課讓你在任何地方用手機或電腦跟著上課，老師即時看到你、即時調整。</p>
 
-  <div class="leverage-explain">
-    <div class="lev-item">
-      <div class="lev-badge">模式 1 · 最低槓桿</div>
-      <div class="lev-title">單堂計費</div>
-      <p class="lev-desc">NT$550–600 / 堂<br>靈活但無固定收入，老師需要每堂滿課才有穩定現金流。</p>
+  <div class="live-hero">
+    <div>
+      <div class="live-screen">
+        <div class="live-dot"><span class="live-dot-text">直播中</span></div>
+        <div class="live-play-btn" role="button" aria-label="觀看直播示範" tabindex="0"></div>
+        <div class="live-viewer-count">👁 32 人正在觀看</div>
+      </div>
+      <div class="live-cta-row">
+        <a href="#booking" class="btn-live">加入下一場直播</a>
+        <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank" rel="noopener" class="btn-live-ghost">訂閱 YouTube 頻道</a>
+      </div>
     </div>
-    <div class="lev-item active">
-      <div class="lev-badge">模式 2 · 推薦</div>
-      <div class="lev-title">月費無限課</div>
-      <p class="lev-desc">NT$2,800 / 月（無限堂）<br>學生固定每月付費，老師收入可預期，學生練習更頻繁，雙贏。</p>
-    </div>
-    <div class="lev-item">
-      <div class="lev-badge">模式 3 · 最高槓桿</div>
-      <div class="lev-title">線上課程 + 數位產品</div>
-      <p class="lev-desc">錄製一次，賣給全台灣<br>不受場地與時間限制，睡著也有收入。</p>
+
+    <div>
+      <div class="live-schedule-title">本週直播時間表</div>
+      <div class="live-schedule">
+        <div class="live-slot next" onclick="openModal('週一直播 · 低空療愈瑜伽 — NT$250')">
+          <div class="slot-left">
+            <div class="slot-day">週一 · 下次直播</div>
+            <div class="slot-title">低空療愈瑜伽</div>
+            <div class="slot-time">12:10–13:10 · Zoom + YouTube Live</div>
+          </div>
+          <div class="slot-right">
+            <div class="slot-price">NT$250</div>
+            <div class="slot-join">立即加入</div>
+          </div>
+        </div>
+        <div class="live-slot" onclick="openModal('週三直播 · 全方位哈達瑜伽 — NT$250')">
+          <div class="slot-left">
+            <div class="slot-day">週三</div>
+            <div class="slot-title">全方位哈達瑜伽</div>
+            <div class="slot-time">12:10–13:10 · Zoom + YouTube Live</div>
+          </div>
+          <div class="slot-right">
+            <div class="slot-price">NT$250</div>
+            <div class="slot-join">預約</div>
+          </div>
+        </div>
+        <div class="live-slot" onclick="openModal('週五直播 · 睡前修復瑜伽 — NT$200')">
+          <div class="slot-left">
+            <div class="slot-day">週五</div>
+            <div class="slot-title">睡前修復瑜伽</div>
+            <div class="slot-time">21:30–22:15 · Zoom + YouTube Live</div>
+          </div>
+          <div class="slot-right">
+            <div class="slot-price">NT$200</div>
+            <div class="slot-join">預約</div>
+          </div>
+        </div>
+        <div class="live-slot" onclick="openModal('週六直播 · 阿斯坦加基礎流動 — NT$280')">
+          <div class="slot-left">
+            <div class="slot-day">週六</div>
+            <div class="slot-title">阿斯坦加基礎流動</div>
+            <div class="slot-time">15:00–15:45 · Zoom + YouTube Live</div>
+          </div>
+          <div class="slot-right">
+            <div class="slot-price">NT$280</div>
+            <div class="slot-join">預約</div>
+          </div>
+        </div>
+      </div>
+      <p class="live-note">✓ 付費後收到 Zoom 連結（48小時前發送）<br>✓ 月費會員所有直播免費無限參加<br>✓ 直播結束後 24 小時內可重播觀看</p>
     </div>
   </div>
+</section>
+
+<!-- ══ 方案 ══ -->
+<section id="membership" aria-label="課程方案">
+  <div class="tag">選擇適合你的方式</div>
+  <h2>越練越<em>划算</em></h2>
+  <p class="lead">單堂隨時彈性，月費無限參加。不管你選哪種，都是同一個老師、同一個品質。</p>
 
   <div class="plans3">
     <div class="plan reveal">
@@ -612,11 +695,11 @@
   </div>
 </section>
 
-<!-- ══ 槓桿：線上課程 ══ -->
+<!-- ══ 線上課程 ══ -->
 <section id="online" aria-label="線上課程">
-  <div class="tag">被動收入 · 線上課程</div>
-  <h2>任何時間<em>任何地方</em>練習</h2>
-  <p class="lead">影片錄製一次，學生可以重複觀看。不受時間地點限制，是最有效率的槓桿收入來源。</p>
+  <div class="tag">錄播課程</div>
+  <h2>自己的步調<em>自己決定</em></h2>
+  <p class="lead">沒辦法配合直播時間？錄播課程讓你隨時開始、隨時暫停、重複看到懂為止。買了永久觀看。</p>
   <div class="online-grid">
     <div class="online-visual" aria-hidden="true">
       <div class="online-play" role="button" aria-label="播放示範影片" tabindex="0"></div>
@@ -663,22 +746,22 @@
   </div>
 </section>
 
-<!-- ══ 槓桿：企業課程 + 轉介制度 ══ -->
+<!-- ══ 企業課程 + 轉介制度 ══ -->
 <div class="corp-banner" role="region" aria-label="企業課程與轉介制度">
   <div class="corp-box reveal">
     <h3>🏢 企業瑜伽課程</h3>
-    <p>到公司或指定場地上課，一次服務 10–30 人，是最高效率的收入模式。一節企業課等於 10–15 堂個人課收入。</p>
+    <p>老師親赴貴公司或指定場地，適合員工健康日、季度團建、壓力管理工作坊。現場教學，員工不必出門。</p>
     <ul>
-      <li>每場 NT$8,000–12,000（60–90分鐘）</li>
-      <li>適合公司員工福利、健康日活動</li>
-      <li>科技公司、金融業、媒體業均有合作</li>
-      <li>可定期包月，形成穩定合約收入</li>
+      <li>適合 10–30 人同時參加</li>
+      <li>60–90 分鐘，依需求客製內容</li>
+      <li>可安排「辦公室椅上瑜伽」（不換衣服也能做）</li>
+      <li>定期合作方案另議</li>
     </ul>
-    <button class="sbtn" style="width:auto;padding:0.8rem 1.8rem;" onclick="openModal('企業瑜伽課程洽談')">洽談企業合作</button>
+    <button class="sbtn" style="width:auto;padding:0.8rem 1.8rem;" onclick="openModal('企業瑜伽課程洽談')">洽談企業課程</button>
   </div>
   <div class="corp-box reveal">
-    <h3>🤝 轉介好友獎勵</h3>
-    <p>不只是自己練，讓你的朋友也受益。成功轉介，老師和你各有回饋——這是成本最低的行銷方式。</p>
+    <h3>🤝 推薦好友，一起練</h3>
+    <p>練瑜伽最怕沒伴。把你的好友拉來一起，兩個人都有優惠，還可以互相督促不缺課。</p>
     <ul>
       <li>轉介 1 位新學員 → 你獲得 1 堂免費課</li>
       <li>被轉介的朋友首堂享 NT$299 優惠</li>
@@ -712,12 +795,15 @@
     <div class="fg">
       <label for="f-class">選擇課程</label>
       <select id="f-class">
-        <option>首堂體驗課 NT$399</option>
-        <option>低空療愈瑜伽（NT$600・最多5人）</option>
-        <option>全方位哈達瑜伽（NT$550・最多8人）</option>
-        <option>阿斯坦加基礎流動（NT$600・最多8人）</option>
-        <option>月費方案 NT$2,800/月</option>
-        <option>線上課程諮詢</option>
+        <option>首堂體驗課 NT$399（實體）</option>
+        <option>實體 · 低空療愈瑜伽（NT$600）</option>
+        <option>實體 · 全方位哈達瑜伽（NT$550）</option>
+        <option>實體 · 阿斯坦加基礎流動（NT$600）</option>
+        <option>直播 · 週一低空療愈（NT$250）</option>
+        <option>直播 · 週三哈達瑜伽（NT$250）</option>
+        <option>直播 · 週五睡前修復（NT$200）</option>
+        <option>直播 · 週六阿斯坦加（NT$280）</option>
+        <option>月費方案 NT$2,800/月（實體+直播無限）</option>
         <option>企業課程洽談</option>
       </select>
     </div>
@@ -910,10 +996,10 @@
       <li><a href="#classes">阿斯坦加基礎流動</a></li>
       <li><a href="#booking">首堂體驗課</a></li>
     </ul></nav>
-    <nav class="fcol" aria-label="資源連結"><h4>資源 &amp; 槓桿</h4><ul>
-      <li><a href="#membership">月費方案</a></li>
-      <li><a href="#online">線上課程</a></li>
-      <li><a href="#products">電子書</a></li>
+    <nav class="fcol" aria-label="線上資源連結"><h4>線上課程</h4><ul>
+      <li><a href="#live">線上直播</a></li>
+      <li><a href="#online">錄播課程</a></li>
+      <li><a href="#membership">方案價格</a></li>
       <li><a href="#videos">YouTube 頻道</a></li>
     </ul></nav>
     <div class="fcol"><h4>聯絡</h4><ul>
