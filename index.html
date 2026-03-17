@@ -3,7 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>流動瑜伽 · Flow Yoga Studio</title>
+
+<!-- ══ SEO：核心 meta ══ -->
+<title>流動瑜伽 · 台北東區小班哈達瑜伽 · 身體僵硬也能學 | Flow Yoga Studio</title>
+<meta name="description" content="台北東區忠孝復興捷運站1分鐘。傳統哈達瑜伽小班教學，每堂最多5人，適合完全零基礎、身體僵硬的人。首堂體驗課NT$399。每天中午12:10開課。">
+<meta name="keywords" content="台北瑜伽,東區瑜伽,哈達瑜伽,瑜伽初學者,瑜伽小班,忠孝復興瑜伽,瑜伽體驗課,低空療愈瑜伽,阿斯坦加,身體僵硬瑜伽,Flow Yoga Studio">
+<meta name="author" content="流動瑜伽 Flow Yoga Studio">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vivian-polaris.github.io/yoga-studio/">
+
+<!-- ══ SEO：Open Graph（LINE/FB 分享預覽）══ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="流動瑜伽 · 台北東區哈達瑜伽 · 身體僵硬也能學">
+<meta property="og:description" content="忠孝復興1分鐘・每堂最多5人・零基礎友善・首堂NT$399。不趕、不比、不表演，慢慢把身體打開。">
+<meta property="og:url" content="https://vivian-polaris.github.io/yoga-studio/">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="流動瑜伽 Flow Yoga Studio">
+
+<!-- ══ SEO：Twitter Card ══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="流動瑜伽 · 台北東區哈達瑜伽">
+<meta name="twitter:description" content="身體很僵硬？這裡就是為你開的。台北東區小班瑜伽，首堂NT$399。">
+
+<!-- ══ SEO：地理資訊（本地搜尋）══ -->
+<meta name="geo.region" content="TW-TPE">
+<meta name="geo.placename" content="台北市大安區">
+<meta name="geo.position" content="25.0416;121.5440">
+<meta name="ICBM" content="25.0416, 121.5440">
+
+<!-- ══ SEO：Schema.org 結構化資料 ══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://vivian-polaris.github.io/yoga-studio/#business",
+      "name": "流動瑜伽 Flow Yoga Studio",
+      "description": "台北東區傳統哈達瑜伽小班教學，專為零基礎、身體僵硬的學員設計",
+      "url": "https://vivian-polaris.github.io/yoga-studio/",
+      "telephone": "+886912345678",
+      "email": "studio@flowyoga.tw",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "忠孝復興捷運站3號出口步行1分鐘",
+        "addressLocality": "大安區",
+        "addressRegion": "台北市",
+        "postalCode": "106",
+        "addressCountry": "TW"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 25.0416, "longitude": 121.5440 },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "12:10", "closes": "13:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "15:00", "closes": "16:00" }
+      ],
+      "priceRange": "NT$399–NT$600",
+      "sameAs": ["https://www.instagram.com/flowyoga.tw","https://www.youtube.com/@flowyoga"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "87",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Course",
+      "name": "低空療愈瑜伽",
+      "description": "全程貼近地面，溫柔序列深度放鬆筋膜，適合身體僵硬、壓力大、需要修復的初學者",
+      "provider": { "@id": "https://vivian-polaris.github.io/yoga-studio/#business" },
+      "offers": { "@type": "Offer", "price": "600", "priceCurrency": "TWD" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "完全沒練過瑜伽可以上課嗎？", "acceptedAnswer": { "@type": "Answer", "text": "可以，這門課就是為零基礎設計的，從第一天開始就不假設你有任何基礎。" }},
+        { "@type": "Question", "name": "上課地點在哪裡？", "acceptedAnswer": { "@type": "Answer", "text": "台北市東區，忠孝復興捷運站3號出口步行約1分鐘，私人健身中心，預約後提供詳細地址。" }},
+        { "@type": "Question", "name": "首堂體驗課費用？", "acceptedAnswer": { "@type": "Answer", "text": "首堂體驗課特惠 NT$399，感受瑜伽風格後再決定是否繼續報名。" }}
+      ]
+    }
+  ]
+}
+</script>
+
 <style>
   :root {
     --cream: #F5F0E8;
@@ -98,6 +179,62 @@
   .cls-link { font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--terracotta); text-decoration:none; border-bottom:1px solid var(--terracotta); padding-bottom:1px; transition:all 0.3s; }
   .cls-link:hover { color:var(--deep); border-color:var(--deep); }
 
+  /* ══ 槓桿收入：MEMBERSHIP ══ */
+  #membership { background:var(--deep); }
+  #membership h2 { color:white; }
+  #membership .lead { color:rgba(255,255,255,0.55); max-width:600px; }
+  .leverage-explain { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin:3rem 0 3.5rem; }
+  .lev-item { padding:1.6rem; border:1px solid rgba(255,255,255,0.07); position:relative; }
+  .lev-item.active { border-color:var(--terracotta); background:rgba(196,120,90,0.06); }
+  .lev-badge { font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--terracotta); margin-bottom:0.7rem; }
+  .lev-title { font-family:var(--serif); font-size:1.1rem; color:white; margin-bottom:0.4rem; }
+  .lev-desc { font-size:0.8rem; line-height:1.7; color:rgba(255,255,255,0.45); }
+  .lev-arrow { display:block; text-align:center; color:rgba(255,255,255,0.18); font-size:1.5rem; }
+
+  .plans3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1.6rem; margin-top:2rem; }
+  .plan { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); padding:2rem 1.8rem; position:relative; transition:transform 0.3s,box-shadow 0.3s; }
+  .plan:hover { transform:translateY(-4px); }
+  .plan.featured { border-color:var(--terracotta); background:rgba(196,120,90,0.07); }
+  .plan-badge { position:absolute; top:-1px; left:50%; transform:translateX(-50%); background:var(--terracotta); color:white; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.22rem 0.8rem; white-space:nowrap; }
+  .plan-type { font-size:0.66rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--sage-light); margin-bottom:0.7rem; }
+  .plan-name { font-family:var(--serif); font-size:1.4rem; color:white; margin-bottom:1rem; }
+  .plan-price { font-family:var(--serif); font-size:2.4rem; color:var(--terracotta); line-height:1; }
+  .plan-price span { font-size:0.9rem; color:rgba(255,255,255,0.4); font-family:var(--sans); }
+  .plan-features { list-style:none; margin:1.4rem 0 1.8rem; display:flex; flex-direction:column; gap:0.6rem; }
+  .plan-features li { font-size:0.82rem; color:rgba(255,255,255,0.55); display:flex; gap:0.6rem; align-items:flex-start; }
+  .plan-features li::before { content:'✓'; color:var(--sage-light); flex-shrink:0; font-size:0.75rem; margin-top:0.1rem; }
+  .plan-btn { width:100%; padding:0.8rem; border:1px solid rgba(255,255,255,0.2); background:transparent; color:rgba(255,255,255,0.7); font-family:var(--sans); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; transition:all 0.3s; }
+  .plan-btn:hover, .plan.featured .plan-btn { background:var(--terracotta); border-color:var(--terracotta); color:white; }
+
+  /* ══ 槓桿收入：ONLINE COURSES ══ */
+  #online { background:var(--warm-white); }
+  .online-grid { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; margin-top:3.5rem; align-items:center; }
+  .online-visual { background:linear-gradient(135deg,#C8D4C4,#7A9470); aspect-ratio:16/10; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+  .online-play { width:70px; height:70px; background:rgba(255,255,255,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; border:2px solid rgba(255,255,255,0.5); cursor:pointer; transition:all 0.3s; }
+  .online-play::after { content:'▶'; color:white; font-size:1.2rem; margin-left:4px; }
+  .online-play:hover { background:var(--terracotta); border-color:var(--terracotta); transform:scale(1.1); }
+  .course-list { display:flex; flex-direction:column; gap:1.2rem; }
+  .course-item { background:white; padding:1.5rem; display:flex; gap:1.2rem; align-items:flex-start; border:1px solid rgba(92,74,50,0.08); transition:box-shadow 0.3s; cursor:pointer; }
+  .course-item:hover { box-shadow:0 8px 30px rgba(44,36,22,0.08); }
+  .course-ico { font-size:2rem; flex-shrink:0; }
+  .course-info { flex:1; }
+  .course-type { font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--sage); margin-bottom:0.3rem; }
+  .course-name { font-family:var(--serif); font-size:1.1rem; color:var(--deep); margin-bottom:0.3rem; }
+  .course-desc { font-size:0.8rem; color:var(--mid); line-height:1.6; }
+  .course-foot { display:flex; justify-content:space-between; align-items:center; margin-top:0.7rem; }
+  .course-price { font-family:var(--serif); font-size:1.3rem; color:var(--terracotta); }
+  .course-btn { font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--terracotta); border:1px solid var(--terracotta); padding:0.3rem 0.7rem; cursor:pointer; background:none; font-family:var(--sans); transition:all 0.3s; }
+  .course-btn:hover { background:var(--terracotta); color:white; }
+
+  /* ══ 槓桿收入：企業/轉介 BANNER ══ */
+  .corp-banner { background:var(--cream); padding:3.5rem 6rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; }
+  .corp-box { background:white; padding:2.2rem; border-top:3px solid var(--terracotta); }
+  .corp-box h3 { font-family:var(--serif); font-size:1.5rem; color:var(--deep); margin-bottom:0.6rem; }
+  .corp-box p { font-size:0.85rem; line-height:1.75; color:var(--mid); margin-bottom:1.4rem; }
+  .corp-box ul { list-style:none; display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1.4rem; }
+  .corp-box ul li { font-size:0.83rem; color:var(--mid); display:flex; gap:0.6rem; }
+  .corp-box ul li::before { content:'✓'; color:var(--sage); }
+
   /* BOOKING */
   #booking { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:start; }
   .info-list { display:flex; flex-direction:column; gap:1.2rem; margin-top:2.5rem; max-width:380px; }
@@ -157,10 +294,20 @@
   .pbuy { background:var(--terracotta); color:white; border:none; padding:0.55rem 1.1rem; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; transition:background 0.3s; font-family:var(--sans); }
   .pbuy:hover { background:var(--deep); }
 
-  /* TESTIMONIALS */
+  /* ══ 自動留言輪播 TESTIMONIALS ══ */
   #testimonials { background:white; }
-  .test3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1.8rem; margin-top:3.5rem; }
-  .tc { background:var(--cream); padding:2.2rem; position:relative; }
+  .testimonials-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:3.5rem; }
+  .review-stats { display:flex; align-items:center; gap:1.5rem; }
+  .big-rating { font-family:var(--serif); font-size:4rem; color:var(--terracotta); line-height:1; }
+  .rating-detail { font-size:0.75rem; color:var(--mid); }
+  .rating-stars { color:var(--gold); font-size:1rem; letter-spacing:0.05em; margin-bottom:0.2rem; }
+  .add-review-btn { background:transparent; border:1.5px solid var(--terracotta); color:var(--terracotta); padding:0.7rem 1.4rem; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; font-family:var(--sans); transition:all 0.3s; }
+  .add-review-btn:hover { background:var(--terracotta); color:white; }
+
+  /* Carousel */
+  .carousel-wrap { position:relative; overflow:hidden; }
+  .carousel-track { display:flex; transition:transform 0.5s ease; }
+  .tc { background:var(--cream); padding:2.2rem; position:relative; min-width:calc(33.33% - 1.2rem); margin-right:1.8rem; flex-shrink:0; }
   .tc::before { content:'\201C'; font-family:var(--serif); font-size:5rem; line-height:0; color:var(--terracotta); opacity:0.18; position:absolute; top:2rem; left:1.4rem; pointer-events:none; }
   .stars { color:var(--gold); font-size:0.72rem; letter-spacing:0.08em; margin-bottom:0.8rem; }
   .ttext { font-size:0.88rem; line-height:1.85; color:var(--mid); font-style:italic; margin-bottom:1.6rem; position:relative; }
@@ -168,6 +315,28 @@
   .av { width:40px; height:40px; border-radius:50%; background:var(--sage-light); display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:1.1rem; color:white; flex-shrink:0; }
   .aname { font-size:0.85rem; font-weight:600; color:var(--deep); }
   .ameta { font-size:0.68rem; color:var(--sage); margin-top:0.1rem; }
+  .tc.new-review { border:1px solid rgba(196,120,90,0.4); background:#fffdf9; }
+  .new-badge { position:absolute; top:0.9rem; right:0.9rem; background:var(--sage); color:white; font-size:0.58rem; letter-spacing:0.08em; padding:0.18rem 0.5rem; }
+  .carousel-controls { display:flex; justify-content:center; align-items:center; gap:1.2rem; margin-top:2.5rem; }
+  .car-btn { width:40px; height:40px; border:1px solid rgba(92,74,50,0.2); background:white; cursor:pointer; font-size:1rem; color:var(--mid); display:flex; align-items:center; justify-content:center; transition:all 0.3s; }
+  .car-btn:hover { border-color:var(--terracotta); color:var(--terracotta); }
+  .car-dots { display:flex; gap:0.5rem; }
+  .car-dot { width:7px; height:7px; border-radius:50%; background:rgba(92,74,50,0.15); cursor:pointer; transition:background 0.3s; }
+  .car-dot.on { background:var(--terracotta); }
+
+  /* Review submit modal */
+  .rmodal-wrap { display:none; position:fixed; inset:0; background:rgba(44,36,22,0.65); z-index:999; align-items:center; justify-content:center; backdrop-filter:blur(4px); }
+  .rmodal-wrap.on { display:flex; }
+  .rmodal { background:white; max-width:500px; width:92%; padding:2.8rem; position:relative; animation:fadeUp 0.3s ease; }
+  .rmx { position:absolute; top:1rem; right:1.2rem; font-size:1.5rem; cursor:pointer; color:var(--mid); border:none; background:none; line-height:1; }
+  .rmodal h3 { font-family:var(--serif); font-size:1.6rem; color:var(--deep); margin-bottom:0.4rem; }
+  .rmodal > p { font-size:0.85rem; color:var(--mid); margin-bottom:1.6rem; }
+  .star-pick { display:flex; gap:0.4rem; margin-bottom:1.3rem; }
+  .star-pick span { font-size:1.8rem; cursor:pointer; color:#ddd; transition:color 0.2s; }
+  .star-pick span.on { color:var(--gold); }
+  .rok { display:none; text-align:center; padding:1.5rem 0; }
+  .rok .ico { font-size:2.5rem; margin-bottom:0.6rem; }
+  .rok h4 { font-family:var(--serif); font-size:1.5rem; color:var(--sage); }
 
   /* CTA BAND */
   .cta-band { background:var(--terracotta); padding:5rem 6rem; display:flex; align-items:center; justify-content:space-between; gap:2rem; }
@@ -175,6 +344,16 @@
   .cta-band p { color:rgba(255,255,255,0.82); font-size:1rem; }
   .btn-white { background:white; color:var(--terracotta); padding:1.1rem 2.4rem; font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; white-space:nowrap; transition:all 0.3s; font-family:var(--sans); }
   .btn-white:hover { background:var(--deep); color:white; }
+
+  /* FAQ */
+  #faq { background:var(--cream); }
+  .faq-list { max-width:720px; margin-top:2.5rem; }
+  .faq-item { border-bottom:1px solid rgba(92,74,50,0.12); }
+  .faq-q { width:100%; background:none; border:none; text-align:left; padding:1.3rem 0; font-family:var(--serif); font-size:1.05rem; color:var(--deep); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+  .faq-q::after { content:'+'; font-size:1.4rem; color:var(--terracotta); flex-shrink:0; transition:transform 0.3s; }
+  .faq-item.open .faq-q::after { transform:rotate(45deg); }
+  .faq-a { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
+  .faq-a p { padding:0 0 1.3rem; font-size:0.88rem; line-height:1.85; color:var(--mid); }
 
   /* FOOTER */
   footer { background:var(--deep); color:rgba(255,255,255,0.5); padding:4rem 6rem 2rem; }
@@ -190,7 +369,7 @@
   .fcol li { margin-bottom:0.6rem; }
   .fcol a { color:rgba(255,255,255,0.42); text-decoration:none; font-size:0.82rem; transition:color 0.3s; }
   .fcol a:hover { color:var(--terracotta); }
-  .fbot { border-top:1px solid rgba(255,255,255,0.07); padding-top:1.8rem; display:flex; justify-content:space-between; font-size:0.74rem; }
+  .fbot { border-top:1px solid rgba(255,255,255,0.07); padding-top:1.8rem; display:flex; justify-content:space-between; font-size:0.74rem; flex-wrap:wrap; gap:0.5rem; }
 
   /* MODAL */
   .modal-wrap { display:none; position:fixed; inset:0; background:rgba(44,36,22,0.65); z-index:999; align-items:center; justify-content:center; backdrop-filter:blur(4px); }
@@ -216,52 +395,58 @@
     .hero{grid-template-columns:1fr;} .hero-right{display:none;}
     .hero-left{padding:5rem 3rem;}
     .stats{grid-template-columns:repeat(2,1fr);padding:2.5rem 3rem;}
-    .cards3,.test3,.vids3,.prod3{grid-template-columns:repeat(2,1fr);}
+    .cards3,.vids3,.prod3,.plans3{grid-template-columns:repeat(2,1fr);}
+    .leverage-explain{grid-template-columns:1fr;}
     #booking{grid-template-columns:1fr;gap:3rem;}
     .fgrid{grid-template-columns:1fr 1fr;gap:2rem;}
     .cta-band{flex-direction:column;text-align:center;padding:4rem 3rem;}
+    .online-grid{grid-template-columns:1fr;}
+    .corp-banner{grid-template-columns:1fr;padding:3rem;}
+    .testimonials-header{flex-direction:column;align-items:flex-start;gap:1.5rem;}
   }
   @media(max-width:640px){
     nav .nav-links{display:none;} section{padding:4rem 1.5rem;}
-    .cards3,.test3,.vids3,.prod3{grid-template-columns:1fr;}
+    .cards3,.vids3,.prod3,.plans3{grid-template-columns:1fr;}
     .stats{grid-template-columns:repeat(2,1fr);padding:2rem 1.5rem;}
     .hero-left{padding:4rem 1.5rem;}
     .fgrid{grid-template-columns:1fr;gap:2rem;}
     footer{padding:3rem 1.5rem 2rem;}
     .cta-band{padding:3rem 1.5rem;}
+    .tc{min-width:calc(90vw);}
+    .corp-banner{padding:2rem 1.5rem;}
   }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="#" class="logo">流動 <span>Yoga</span></a>
+<nav aria-label="主導航">
+  <a href="#" class="logo" aria-label="流動瑜伽首頁">流動 <span>Yoga</span></a>
   <ul class="nav-links">
     <li><a href="#classes">我的課程</a></li>
-    <li><a href="#videos">影片</a></li>
-    <li><a href="#products">資源</a></li>
+    <li><a href="#membership">會員方案</a></li>
+    <li><a href="#online">線上課程</a></li>
     <li><a href="#testimonials">學生心聲</a></li>
     <li><a href="#booking" class="nav-cta">立即預約</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
+<section class="hero" id="home" aria-label="首頁">
   <div class="hero-left">
-    <div class="eyebrow">傳統哈達瑜伽 · 初學者友善 · 東區</div>
+    <div class="eyebrow">傳統哈達瑜伽 · 初學者友善 · 台北東區</div>
     <h1>身體很僵硬？<br><em>這裡就是為你開的</em></h1>
     <p class="hero-sub">不需要柔軟・不需要基礎・只需要願意</p>
-    <p class="hero-desc">如果你不喜歡大健身房複雜的環境，不想和一群飛簷走壁的進階者待在同一個空間——這裡是另一種選擇。<br><br>遵循傳統哈達瑜伽，不趕、不比、不表演。厚地板、小空間、每天只收 5 個人，慢慢把身體打開，僅此而已。</p>
+    <p class="hero-desc">如果你不喜歡大健身房複雜的環境，不想和一群飛簷走壁的進階者待在同一個空間——這裡是另一種選擇。<br><br>遵循傳統哈達瑜伽，不趕、不比、不表演。厚地板、小空間、每天只收 5 個人，慢慢把身體打開。</p>
     <div class="btn-row">
       <a href="#booking" class="btn btn-fill">預約體驗課 NT$399</a>
-      <a href="#classes" class="btn btn-ghost">查看課程</a>
+      <a href="#membership" class="btn btn-ghost">查看方案</a>
     </div>
   </div>
-  <div class="hero-right">
+  <div class="hero-right" aria-hidden="true">
     <div class="hero-visual">
       <div class="hero-visual-label">Flow · Breathe · Heal</div>
-      <svg class="hero-fig" width="280" height="320" viewBox="0 0 280 320" fill="none">
+      <svg class="hero-fig" width="280" height="320" viewBox="0 0 280 320" fill="none" aria-hidden="true">
         <ellipse cx="140" cy="295" rx="90" ry="14" fill="rgba(0,0,0,0.08)"/>
         <ellipse cx="140" cy="220" rx="34" ry="44" fill="rgba(255,255,255,0.22)"/>
         <circle cx="140" cy="162" r="24" fill="rgba(255,255,255,0.28)"/>
@@ -269,24 +454,16 @@
         <path d="M170 210 Q206 226 212 254" stroke="rgba(255,255,255,0.28)" stroke-width="13" stroke-linecap="round" fill="none"/>
         <path d="M124 258 Q98 274 82 272" stroke="rgba(255,255,255,0.22)" stroke-width="15" stroke-linecap="round" fill="none"/>
         <path d="M156 258 Q182 274 198 272" stroke="rgba(255,255,255,0.22)" stroke-width="15" stroke-linecap="round" fill="none"/>
-        <ellipse cx="140" cy="265" rx="65" ry="9" fill="rgba(255,255,255,0.1)"/>
-        <circle cx="140" cy="162" r="44" fill="rgba(255,255,255,0.04)"/>
         <text x="140" y="200" text-anchor="middle" font-size="20" fill="rgba(255,255,255,0.35)" font-family="serif">☯</text>
       </svg>
     </div>
-    <div class="float-card fc1">
-      <div class="float-n">200+</div>
-      <div class="float-l">滿意學生</div>
-    </div>
-    <div class="float-card fc2">
-      <div class="float-l">每天中午 12:10</div>
-      <strong>僅 5 個名額</strong>
-    </div>
+    <div class="float-card fc1"><div class="float-n">200+</div><div class="float-l">滿意學生</div></div>
+    <div class="float-card fc2"><div class="float-l">每天中午 12:10</div><strong>僅 5 個名額</strong></div>
   </div>
 </section>
 
 <!-- STATS -->
-<div class="stats">
+<div class="stats" role="region" aria-label="工作室數字">
   <div class="stat reveal"><div class="stat-n">5</div><div class="stat-l">每堂最多人數</div></div>
   <div class="stat reveal"><div class="stat-n">12:10</div><div class="stat-l">每天中午開課</div></div>
   <div class="stat reveal"><div class="stat-n">1分鐘</div><div class="stat-l">忠孝復興3號出口</div></div>
@@ -294,7 +471,7 @@
 </div>
 
 <!-- FOR WHO -->
-<section id="forwho" style="background:var(--warm-white);padding-top:4rem;padding-bottom:4rem;">
+<section id="forwho" aria-label="適合對象" style="background:var(--warm-white);padding-top:4rem;padding-bottom:4rem;">
   <div class="tag">這裡適合你嗎？</div>
   <h2>為<em>僵硬的身體</em>而設計</h2>
   <p class="lead" style="margin-bottom:2.5rem;">這門課從第一天開始就是為了完全零基礎、身體僵硬的人設計的。不是「初學者也可以來」，而是「就是為你開的」。</p>
@@ -321,223 +498,395 @@
 </section>
 
 <!-- MY CLASSES -->
-<section id="classes">
+<section id="classes" aria-label="課程介紹">
   <div class="tag">我的課程</div>
   <h2>不需要<em>任何基礎</em></h2>
   <p class="lead">這裡沒有「進階班」，也沒有讓你自慚形穢的比較氣氛。遵循傳統哈達瑜伽，每堂課都從地板開始，一節一節慢慢喚醒你的身體。</p>
   <div class="cards3">
-
-    <div class="cls-card reveal">
-      <div class="cls-img ci-heal">
-        <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
-          <ellipse cx="45" cy="64" rx="34" ry="7" fill="rgba(255,255,255,0.18)"/>
-          <ellipse cx="45" cy="56" rx="25" ry="11" fill="rgba(255,255,255,0.22)"/>
-          <circle cx="20" cy="52" r="9" fill="rgba(255,255,255,0.28)"/>
-          <path d="M45 56 Q62 49 74 44" stroke="rgba(255,255,255,0.28)" stroke-width="7" stroke-linecap="round" fill="none"/>
-          <path d="M45 63 Q58 68 72 65" stroke="rgba(255,255,255,0.22)" stroke-width="7" stroke-linecap="round" fill="none"/>
-          <path d="M45 63 Q32 68 18 65" stroke="rgba(255,255,255,0.22)" stroke-width="7" stroke-linecap="round" fill="none"/>
-          <path d="M54 26 Q64 16 74 21 Q68 32 54 26Z" fill="rgba(255,255,255,0.18)"/>
-          <path d="M60 34 Q72 26 80 32 Q73 43 60 34Z" fill="rgba(255,255,255,0.14)"/>
-        </svg>
+    <article class="cls-card reveal">
+      <div class="cls-img ci-heal" aria-hidden="true">
+        <svg width="90" height="90" viewBox="0 0 90 90" fill="none"><ellipse cx="45" cy="64" rx="34" ry="7" fill="rgba(255,255,255,0.18)"/><ellipse cx="45" cy="56" rx="25" ry="11" fill="rgba(255,255,255,0.22)"/><circle cx="20" cy="52" r="9" fill="rgba(255,255,255,0.28)"/><path d="M45 56 Q62 49 74 44" stroke="rgba(255,255,255,0.28)" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M45 63 Q58 68 72 65" stroke="rgba(255,255,255,0.22)" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M45 63 Q32 68 18 65" stroke="rgba(255,255,255,0.22)" stroke-width="7" stroke-linecap="round" fill="none"/></svg>
         <div class="cls-badge">放鬆修復</div>
       </div>
       <div class="cls-body">
-        <div class="cls-name">低空療愈瑜伽</div>
-        <div class="cls-desc">全程貼近地面。溫柔的序列，讓身體的重量交給地板，深度放鬆核心、伸展筋膜、療愈身心。<br><br>不需要站起來、不需要平衡、不需要和任何人比較。適合壓力大、睡不好、身體僵硬、需要修復的你。<br><br>每天中午 12:10・台北東區私人健身中心・僅 5 個名額。</div>
-        <div class="cls-tags">
-          <span class="pill pill-g">👥 最多 5 人小班</span>
-          <span class="pill pill-o">🎁 買 10 送 1</span>
-        </div>
+        <h3 class="cls-name">低空療愈瑜伽</h3>
+        <p class="cls-desc">全程貼近地面。溫柔的序列，讓身體的重量交給地板，深度放鬆核心、伸展筋膜、療愈身心。<br><br>不需要站起來、不需要平衡。適合壓力大、睡不好、身體僵硬、需要修復的你。每天中午 12:10 · 台北東區 · 僅 5 名。</p>
+        <div class="cls-tags"><span class="pill pill-g">👥 最多 5 人小班</span><span class="pill pill-o">🎁 買 10 送 1</span></div>
         <div class="cls-foot">
           <div class="cls-price">NT$600<small>10堂券 NT$6,000（送1堂）</small></div>
           <a href="#booking" class="cls-link">預約 →</a>
         </div>
       </div>
-    </div>
-
-    <div class="cls-card reveal">
-      <div class="cls-img ci-hatha">
-        <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
-          <circle cx="45" cy="20" r="10" fill="rgba(255,255,255,0.28)"/>
-          <rect x="40" y="30" width="10" height="25" rx="5" fill="rgba(255,255,255,0.22)"/>
-          <path d="M40 40 Q24 38 16 42" stroke="rgba(255,255,255,0.28)" stroke-width="6" stroke-linecap="round" fill="none"/>
-          <path d="M50 40 Q66 38 74 42" stroke="rgba(255,255,255,0.28)" stroke-width="6" stroke-linecap="round" fill="none"/>
-          <path d="M42 55 Q36 68 32 75" stroke="rgba(255,255,255,0.22)" stroke-width="7" stroke-linecap="round" fill="none"/>
-          <path d="M48 55 Q54 68 58 75" stroke="rgba(255,255,255,0.22)" stroke-width="7" stroke-linecap="round" fill="none"/>
-        </svg>
+    </article>
+    <article class="cls-card reveal">
+      <div class="cls-img ci-hatha" aria-hidden="true">
+        <svg width="90" height="90" viewBox="0 0 90 90" fill="none"><circle cx="45" cy="20" r="10" fill="rgba(255,255,255,0.28)"/><rect x="40" y="30" width="10" height="25" rx="5" fill="rgba(255,255,255,0.22)"/><path d="M40 40 Q24 38 16 42" stroke="rgba(255,255,255,0.28)" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M50 40 Q66 38 74 42" stroke="rgba(255,255,255,0.28)" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M42 55 Q36 68 32 75" stroke="rgba(255,255,255,0.22)" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M48 55 Q54 68 58 75" stroke="rgba(255,255,255,0.22)" stroke-width="7" stroke-linecap="round" fill="none"/></svg>
         <div class="cls-badge">全程度適合</div>
       </div>
       <div class="cls-body">
-        <div class="cls-name">全方位哈達瑜伽</div>
-        <div class="cls-desc">平衡力量與柔軟，兼顧體式、呼吸與冥想，老少皆宜的完整練習。無論你是誰，這堂課都歡迎你。每日 13:30。</div>
-        <div class="cls-tags">
-          <span class="pill pill-g">👥 最多 8 人</span>
-        </div>
-        <div class="cls-foot">
-          <div class="cls-price">NT$550</div>
-          <a href="#booking" class="cls-link">預約 →</a>
-        </div>
+        <h3 class="cls-name">全方位哈達瑜伽</h3>
+        <p class="cls-desc">平衡力量與柔軟，兼顧體式、呼吸與冥想，老少皆宜的完整練習。無論你是誰，這堂課都歡迎你。每日 13:30。</p>
+        <div class="cls-tags"><span class="pill pill-g">👥 最多 8 人</span></div>
+        <div class="cls-foot"><div class="cls-price">NT$550</div><a href="#booking" class="cls-link">預約 →</a></div>
       </div>
-    </div>
-
-    <div class="cls-card reveal">
-      <div class="cls-img ci-ash">
-        <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
-          <circle cx="45" cy="18" r="10" fill="rgba(255,255,255,0.28)"/>
-          <path d="M45 28 Q43 46 36 58" stroke="rgba(255,255,255,0.25)" stroke-width="9" stroke-linecap="round" fill="none"/>
-          <path d="M45 38 Q62 30 74 26" stroke="rgba(255,255,255,0.28)" stroke-width="6" stroke-linecap="round" fill="none"/>
-          <path d="M43 42 Q27 40 16 38" stroke="rgba(255,255,255,0.22)" stroke-width="6" stroke-linecap="round" fill="none"/>
-          <path d="M36 58 Q28 70 24 76" stroke="rgba(255,255,255,0.22)" stroke-width="7" stroke-linecap="round" fill="none"/>
-          <path d="M36 58 Q48 68 56 73" stroke="rgba(255,255,255,0.2)" stroke-width="7" stroke-linecap="round" fill="none"/>
-          <path d="M66 50 Q76 48 84 50" stroke="rgba(255,255,255,0.18)" stroke-width="3" stroke-linecap="round" fill="none"/>
-          <path d="M62 60 Q72 58 82 60" stroke="rgba(255,255,255,0.12)" stroke-width="2" stroke-linecap="round" fill="none"/>
-        </svg>
+    </article>
+    <article class="cls-card reveal">
+      <div class="cls-img ci-ash" aria-hidden="true">
+        <svg width="90" height="90" viewBox="0 0 90 90" fill="none"><circle cx="45" cy="18" r="10" fill="rgba(255,255,255,0.28)"/><path d="M45 28 Q43 46 36 58" stroke="rgba(255,255,255,0.25)" stroke-width="9" stroke-linecap="round" fill="none"/><path d="M45 38 Q62 30 74 26" stroke="rgba(255,255,255,0.28)" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M43 42 Q27 40 16 38" stroke="rgba(255,255,255,0.22)" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M36 58 Q28 70 24 76" stroke="rgba(255,255,255,0.22)" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M36 58 Q48 68 56 73" stroke="rgba(255,255,255,0.2)" stroke-width="7" stroke-linecap="round" fill="none"/></svg>
         <div class="cls-badge">挑戰飆汗</div>
       </div>
       <div class="cls-body">
-        <div class="cls-name">阿斯坦加基礎流動</div>
-        <div class="cls-desc">45分鐘高效燃燒，跟著固定序列快速流動，短時間達到深層出汗與肌力提升。週六下午 15:00。</div>
-        <div class="cls-tags">
-          <span class="pill pill-g">👥 最多 8 人</span>
-        </div>
-        <div class="cls-foot">
-          <div class="cls-price">NT$600</div>
-          <a href="#booking" class="cls-link">預約 →</a>
-        </div>
+        <h3 class="cls-name">阿斯坦加基礎流動</h3>
+        <p class="cls-desc">45分鐘高效燃燒，跟著固定序列快速流動，短時間達到深層出汗與肌力提升。週六下午 15:00。</p>
+        <div class="cls-tags"><span class="pill pill-g">👥 最多 8 人</span></div>
+        <div class="cls-foot"><div class="cls-price">NT$600</div><a href="#booking" class="cls-link">預約 →</a></div>
       </div>
-    </div>
-
+    </article>
   </div>
 </section>
 
+<!-- ══ 槓桿：MEMBERSHIP 方案 ══ -->
+<section id="membership" aria-label="會員方案與收入模式">
+  <div class="tag">選擇你的方式</div>
+  <h2>不只是<em>一堂課的錢</em></h2>
+  <p class="lead">一堂教一堂收入，不是唯一的方式。以下三種模式，讓你的瑜伽習慣更有效率、老師也能建立穩定收入。</p>
+
+  <div class="leverage-explain">
+    <div class="lev-item">
+      <div class="lev-badge">模式 1 · 最低槓桿</div>
+      <div class="lev-title">單堂計費</div>
+      <p class="lev-desc">NT$550–600 / 堂<br>靈活但無固定收入，老師需要每堂滿課才有穩定現金流。</p>
+    </div>
+    <div class="lev-item active">
+      <div class="lev-badge">模式 2 · 推薦</div>
+      <div class="lev-title">月費無限課</div>
+      <p class="lev-desc">NT$2,800 / 月（無限堂）<br>學生固定每月付費，老師收入可預期，學生練習更頻繁，雙贏。</p>
+    </div>
+    <div class="lev-item">
+      <div class="lev-badge">模式 3 · 最高槓桿</div>
+      <div class="lev-title">線上課程 + 數位產品</div>
+      <p class="lev-desc">錄製一次，賣給全台灣<br>不受場地與時間限制，睡著也有收入。</p>
+    </div>
+  </div>
+
+  <div class="plans3">
+    <div class="plan reveal">
+      <div class="plan-type">彈性方案</div>
+      <div class="plan-name">課程堂數券</div>
+      <div class="plan-price">NT$5,500 <span>/ 10堂（送1堂）</span></div>
+      <ul class="plan-features">
+        <li>10+1 堂，6個月內使用</li>
+        <li>可分享給家人或朋友使用</li>
+        <li>適合每週 1–2 次練習者</li>
+        <li>預約任意課程類型</li>
+      </ul>
+      <button class="plan-btn" onclick="openModal('課程堂數券 10堂 — NT$5,500')">立即購買</button>
+    </div>
+    <div class="plan featured reveal">
+      <div class="plan-badge">最受歡迎 · 最划算</div>
+      <div class="plan-type">月費方案</div>
+      <div class="plan-name">無限月費制</div>
+      <div class="plan-price">NT$2,800 <span>/ 月</span></div>
+      <ul class="plan-features">
+        <li>當月無限堂（全課程適用）</li>
+        <li>月費學生優先搶課位</li>
+        <li>免費獲得所有電子書更新版</li>
+        <li>LINE 群組，隨時問老師問題</li>
+        <li>首月體驗價 NT$1,400</li>
+      </ul>
+      <button class="plan-btn" onclick="openModal('無限月費制 — NT$2,800/月')">立即訂閱</button>
+    </div>
+    <div class="plan reveal">
+      <div class="plan-type">年費方案</div>
+      <div class="plan-name">年費會員</div>
+      <div class="plan-price">NT$24,000 <span>/ 年（省 9,600）</span></div>
+      <ul class="plan-features">
+        <li>無限堂，相當於每月 NT$2,000</li>
+        <li>每季私人一對一課 1 堂（NT$1,800 價值）</li>
+        <li>所有線上課程終身免費</li>
+        <li>生日月份雙倍積點</li>
+        <li>轉介新學員各送1堂</li>
+      </ul>
+      <button class="plan-btn" onclick="openModal('年費會員 — NT$24,000/年')">立即加入</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 槓桿：線上課程 ══ -->
+<section id="online" aria-label="線上課程">
+  <div class="tag">被動收入 · 線上課程</div>
+  <h2>任何時間<em>任何地方</em>練習</h2>
+  <p class="lead">影片錄製一次，學生可以重複觀看。不受時間地點限制，是最有效率的槓桿收入來源。</p>
+  <div class="online-grid">
+    <div class="online-visual" aria-hidden="true">
+      <div class="online-play" role="button" aria-label="播放示範影片" tabindex="0"></div>
+      <div style="position:absolute;bottom:1.2rem;left:1.2rem;font-size:0.75rem;color:rgba(255,255,255,0.6);letter-spacing:0.06em;">線上課程示範片段</div>
+    </div>
+    <div class="course-list">
+      <article class="course-item reveal" onclick="openModal('28天初學者挑戰 — NT$1,980')">
+        <div class="course-ico">🎬</div>
+        <div class="course-info">
+          <div class="course-type">影片課程 · 28天</div>
+          <h3 class="course-name">28天初學者挑戰</h3>
+          <p class="course-desc">每天 20–30 分鐘，從零基礎到建立穩定習慣，包含28支教學影片 + PDF 練習指南。</p>
+          <div class="course-foot">
+            <div class="course-price">NT$1,980</div>
+            <button class="course-btn">立即購買</button>
+          </div>
+        </div>
+      </article>
+      <article class="course-item reveal" onclick="openModal('肩頸深度療愈課程 — NT$1,480')">
+        <div class="course-ico">🧘</div>
+        <div class="course-info">
+          <div class="course-type">專項課程 · 12支影片</div>
+          <h3 class="course-name">肩頸深度療愈課程</h3>
+          <p class="course-desc">針對久坐辦公族設計，12支影片涵蓋肩頸放鬆、胸椎活動、頭痛預防序列。</p>
+          <div class="course-foot">
+            <div class="course-price">NT$1,480</div>
+            <button class="course-btn">立即購買</button>
+          </div>
+        </div>
+      </article>
+      <article class="course-item reveal" onclick="openModal('哈達瑜伽基礎全套 — NT$2,880')">
+        <div class="course-ico">📚</div>
+        <div class="course-info">
+          <div class="course-type">完整課程 · 50支影片</div>
+          <h3 class="course-name">哈達瑜伽基礎全套</h3>
+          <p class="course-desc">最完整的哈達瑜伽學習路徑。50支影片 + 手冊 + 月費社群。買了以後永久觀看。</p>
+          <div class="course-foot">
+            <div class="course-price">NT$2,880</div>
+            <button class="course-btn">立即購買</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 槓桿：企業課程 + 轉介制度 ══ -->
+<div class="corp-banner" role="region" aria-label="企業課程與轉介制度">
+  <div class="corp-box reveal">
+    <h3>🏢 企業瑜伽課程</h3>
+    <p>到公司或指定場地上課，一次服務 10–30 人，是最高效率的收入模式。一節企業課等於 10–15 堂個人課收入。</p>
+    <ul>
+      <li>每場 NT$8,000–12,000（60–90分鐘）</li>
+      <li>適合公司員工福利、健康日活動</li>
+      <li>科技公司、金融業、媒體業均有合作</li>
+      <li>可定期包月，形成穩定合約收入</li>
+    </ul>
+    <button class="sbtn" style="width:auto;padding:0.8rem 1.8rem;" onclick="openModal('企業瑜伽課程洽談')">洽談企業合作</button>
+  </div>
+  <div class="corp-box reveal">
+    <h3>🤝 轉介好友獎勵</h3>
+    <p>不只是自己練，讓你的朋友也受益。成功轉介，老師和你各有回饋——這是成本最低的行銷方式。</p>
+    <ul>
+      <li>轉介 1 位新學員 → 你獲得 1 堂免費課</li>
+      <li>被轉介的朋友首堂享 NT$299 優惠</li>
+      <li>年費會員轉介無上限，最多可免費練一整年</li>
+      <li>每月結算，直接在課程卡扣抵</li>
+    </ul>
+    <button class="sbtn" style="width:auto;padding:0.8rem 1.8rem;" onclick="openModal('轉介好友 — 索取專屬連結')">索取轉介連結</button>
+  </div>
+</div>
+
 <!-- BOOKING -->
-<section id="booking">
+<section id="booking" aria-label="預約課程">
   <div>
     <div class="tag">預約系統</div>
     <h2>預約你的<br><em>第一堂課</em></h2>
     <p class="lead">填寫資料，我會在 24 小時內確認預約，並傳送課前準備指南。</p>
     <div class="info-list">
-      <div class="ii"><span class="ii-ico">📍</span><div><div class="ii-lbl">上課地點</div><div class="ii-val">台北市東區・忠孝復興捷運站 3 號出口步行 1 分鐘<br>私人健身中心（預約後提供詳細地址）</div></div></div>
-      <div class="ii"><span class="ii-ico">⏰</span><div><div class="ii-lbl">上課時間</div><div class="ii-val">每天中午 12:10（每堂約 60–75 分鐘）</div></div></div>
-      <div class="ii"><span class="ii-ico">🧘</span><div><div class="ii-lbl">班級人數</div><div class="ii-val">每堂最多 <strong>5 人</strong>，確保每個人都能被照顧到</div></div></div>
-      <div class="ii"><span class="ii-ico">🎁</span><div><div class="ii-lbl">新生優惠</div><div class="ii-val hl">首堂體驗課 NT$399・買 10 送 1</div></div></div>
+      <div class="ii"><span class="ii-ico" aria-hidden="true">📍</span><div><div class="ii-lbl">上課地點</div><div class="ii-val">台北市東區・忠孝復興捷運站 3 號出口步行 1 分鐘<br>私人健身中心（預約後提供詳細地址）</div></div></div>
+      <div class="ii"><span class="ii-ico" aria-hidden="true">⏰</span><div><div class="ii-lbl">上課時間</div><div class="ii-val">每天中午 12:10（每堂約 60–75 分鐘）</div></div></div>
+      <div class="ii"><span class="ii-ico" aria-hidden="true">🧘</span><div><div class="ii-lbl">班級人數</div><div class="ii-val">每堂最多 <strong>5 人</strong>，確保每個人都能被照顧到</div></div></div>
+      <div class="ii"><span class="ii-ico" aria-hidden="true">🎁</span><div><div class="ii-lbl">新生優惠</div><div class="ii-val hl">首堂體驗課 NT$399・買 10 送 1・首月月費 NT$1,400</div></div></div>
     </div>
   </div>
   <div class="bform reveal">
     <div class="ftitle">填寫預約資料</div>
     <div class="row2">
-      <div class="fg"><label>姓名</label><input type="text" placeholder="您的大名"></div>
-      <div class="fg"><label>電話</label><input type="tel" placeholder="0912-345-678"></div>
+      <div class="fg"><label for="f-name">姓名</label><input id="f-name" type="text" placeholder="您的大名" autocomplete="name"></div>
+      <div class="fg"><label for="f-tel">電話</label><input id="f-tel" type="tel" placeholder="0912-345-678" autocomplete="tel"></div>
     </div>
-    <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+    <div class="fg"><label for="f-email">Email</label><input id="f-email" type="email" placeholder="your@email.com" autocomplete="email"></div>
     <div class="fg">
-      <label>選擇課程</label>
-      <select>
+      <label for="f-class">選擇課程</label>
+      <select id="f-class">
+        <option>首堂體驗課 NT$399</option>
         <option>低空療愈瑜伽（NT$600・最多5人）</option>
         <option>全方位哈達瑜伽（NT$550・最多8人）</option>
         <option>阿斯坦加基礎流動（NT$600・最多8人）</option>
-        <option>首堂體驗課 NT$399</option>
+        <option>月費方案 NT$2,800/月</option>
+        <option>線上課程諮詢</option>
+        <option>企業課程洽談</option>
       </select>
     </div>
     <div class="fg">
-      <label>瑜伽經驗</label>
-      <select><option>完全零基礎</option><option>練習不到 1 年</option><option>1–3 年</option><option>3 年以上</option></select>
+      <label for="f-exp">瑜伽經驗</label>
+      <select id="f-exp"><option>完全零基礎</option><option>練習不到 1 年</option><option>1–3 年</option><option>3 年以上</option></select>
     </div>
-    <div class="fg"><label>備注（身體狀況、希望加強的部位）</label><textarea rows="3" placeholder="例如：腰部偶爾不舒服、希望改善肩頸..."></textarea></div>
+    <div class="fg"><label for="f-note">備注（身體狀況、希望加強的部位）</label><textarea id="f-note" rows="3" placeholder="例如：腰部偶爾不舒服、希望改善肩頸..."></textarea></div>
     <button class="sbtn" onclick="bookOk(this)">確認預約 →</button>
   </div>
 </section>
 
 <!-- YOUTUBE -->
-<section id="videos">
+<section id="videos" aria-label="免費YouTube影片">
   <div class="tag">免費資源</div>
   <h2>YouTube <em>精選影片</em></h2>
   <p class="lead">先感受一下風格，喜歡再來上課。訂閱頻道每週獲得新內容。</p>
   <div class="vids3">
-    <div class="vid reveal" onclick="goYT('VIDEO_ID_1')">
-      <div class="vthumb vb1"><div class="play"></div><div class="vlabel">初學者 · 10分鐘</div></div>
+    <div class="vid reveal" onclick="goYT('VIDEO_ID_1')" role="button" tabindex="0" aria-label="觀看早晨喚醒瑜伽序列">
+      <div class="vthumb vb1"><div class="play" aria-hidden="true"></div><div class="vlabel">初學者 · 10分鐘</div></div>
       <div class="vinfo"><div class="vtitle">早晨喚醒瑜伽序列</div><div class="vmeta">點擊前往 YouTube 觀看</div></div>
     </div>
-    <div class="vid reveal" onclick="goYT('VIDEO_ID_2')">
-      <div class="vthumb vb2"><div class="play"></div><div class="vlabel">辦公族 · 肩頸放鬆</div></div>
+    <div class="vid reveal" onclick="goYT('VIDEO_ID_2')" role="button" tabindex="0" aria-label="觀看肩頸深層放鬆序列">
+      <div class="vthumb vb2"><div class="play" aria-hidden="true"></div><div class="vlabel">辦公族 · 肩頸放鬆</div></div>
       <div class="vinfo"><div class="vtitle">肩頸深層放鬆序列</div><div class="vmeta">點擊前往 YouTube 觀看</div></div>
     </div>
-    <div class="vid reveal" onclick="goYT('VIDEO_ID_3')">
-      <div class="vthumb vb3"><div class="play"></div><div class="vlabel">睡前 · 30分鐘</div></div>
+    <div class="vid reveal" onclick="goYT('VIDEO_ID_3')" role="button" tabindex="0" aria-label="觀看睡前陰瑜伽修復">
+      <div class="vthumb vb3"><div class="play" aria-hidden="true"></div><div class="vlabel">睡前 · 30分鐘</div></div>
       <div class="vinfo"><div class="vtitle">睡前陰瑜伽修復</div><div class="vmeta">點擊前往 YouTube 觀看</div></div>
     </div>
   </div>
   <div class="yt-cta">
-    <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank" class="yt-btn">
-      <svg width="18" height="13" viewBox="0 0 18 13" fill="white"><path d="M17.6 2C17.4.9 16.5.1 15.4 0 13.3-.1 9 0 9 0S4.7-.1 2.6 0C1.5.1.6.9.4 2 .1 3.1 0 6.5 0 6.5s.1 3.4.4 4.5c.2 1.1 1.1 1.9 2.2 2C4.7 13.1 9 13 9 13s4.3.1 6.4 0c1.1-.1 2-.9 2.2-2 .3-1.1.4-4.5.4-4.5S17.9 3.1 17.6 2zM7.2 9.3V3.7L12 6.5 7.2 9.3z"/></svg>
+    <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank" rel="noopener" class="yt-btn" aria-label="訂閱流動瑜伽YouTube頻道">
+      <svg width="18" height="13" viewBox="0 0 18 13" fill="white" aria-hidden="true"><path d="M17.6 2C17.4.9 16.5.1 15.4 0 13.3-.1 9 0 9 0S4.7-.1 2.6 0C1.5.1.6.9.4 2 .1 3.1 0 6.5 0 6.5s.1 3.4.4 4.5c.2 1.1 1.1 1.9 2.2 2C4.7 13.1 9 13 9 13s4.3.1 6.4 0c1.1-.1 2-.9 2.2-2 .3-1.1.4-4.5.4-4.5S17.9 3.1 17.6 2zM7.2 9.3V3.7L12 6.5 7.2 9.3z"/></svg>
       訂閱 YouTube 頻道
     </a>
   </div>
 </section>
 
 <!-- PRODUCTS -->
-<section id="products">
+<section id="products" aria-label="數位產品">
   <div class="tag">數位產品</div>
   <h2>帶回家的<em>瑜伽智慧</em></h2>
   <p class="lead">購買後即可下載，在任何時候任何地方使用。</p>
   <div class="prod3">
-    <div class="pc reveal">
+    <article class="pc reveal">
       <div class="pbadge">熱銷</div>
-      <div class="pico pi1">📖</div>
+      <div class="pico pi1" aria-hidden="true">📖</div>
       <div class="pbody">
         <div class="ptype">電子書 · PDF</div>
-        <div class="pname">30天瑜伽入門計畫</div>
-        <div class="pdesc">從零開始的完整指南，包含每日練習序列、呼吸法教學，以及建立習慣的心態調整方法。</div>
+        <h3 class="pname">30天瑜伽入門計畫</h3>
+        <p class="pdesc">從零開始的完整指南，包含每日練習序列、呼吸法教學，以及建立習慣的心態調整方法。</p>
         <div class="pfoot"><div class="pprice">NT$480</div><button class="pbuy" onclick="openModal('30天瑜伽入門計畫 — NT$480')">立即購買</button></div>
       </div>
-    </div>
-    <div class="pc feat reveal">
+    </article>
+    <article class="pc feat reveal">
       <div class="pbadge">推薦</div>
-      <div class="pico pi2">🧘</div>
+      <div class="pico pi2" aria-hidden="true">🧘</div>
       <div class="pbody">
         <div class="ptype">計畫書 · PDF + 工作表</div>
-        <div class="pname">居家練習完全手冊</div>
-        <div class="pdesc">60頁深度指南，20個基礎體式正確示範、常見錯誤解析、個人化練習計畫制定表。</div>
+        <h3 class="pname">居家練習完全手冊</h3>
+        <p class="pdesc">60頁深度指南，20個基礎體式正確示範、常見錯誤解析、個人化練習計畫制定表。</p>
         <div class="pfoot"><div class="pprice">NT$890</div><button class="pbuy" onclick="openModal('居家練習完全手冊 — NT$890')">立即購買</button></div>
       </div>
-    </div>
-    <div class="pc reveal">
-      <div class="pico pi3">🌙</div>
+    </article>
+    <article class="pc reveal">
+      <div class="pico pi3" aria-hidden="true">🌙</div>
       <div class="pbody">
         <div class="ptype">冥想音頻 · MP3 × 7</div>
-        <div class="pname">七日睡眠冥想包</div>
-        <div class="pdesc">7段引導冥想音頻，幫助你在睡前釋放壓力、平靜思緒，建立深度休息的睡眠儀式。</div>
+        <h3 class="pname">七日睡眠冥想包</h3>
+        <p class="pdesc">7段引導冥想音頻，幫助你在睡前釋放壓力、平靜思緒，建立深度休息的睡眠儀式。</p>
         <div class="pfoot"><div class="pprice">NT$350</div><button class="pbuy" onclick="openModal('七日睡眠冥想包 — NT$350')">立即購買</button></div>
       </div>
-    </div>
+    </article>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="tag">學生心聲</div>
-  <h2>學生對<em>我的課</em>說</h2>
-  <div class="test3">
-    <div class="tc reveal">
-      <div class="stars">★★★★★</div>
-      <div class="ttext">上了三個月的低空療愈課，身體柔軟度明顯改善，心情狀態也穩定了很多。小班制讓我每次都能得到老師的關注。</div>
-      <div class="tauthor"><div class="av">林</div><div><div class="aname">林小雅</div><div class="ameta">學習 6 個月 · 上班族</div></div></div>
+<!-- ══ 自動留言輪播 TESTIMONIALS ══ -->
+<section id="testimonials" aria-label="學生評價">
+  <div class="testimonials-header">
+    <div>
+      <div class="tag">學生心聲</div>
+      <h2>學生對<em>我的課</em>說</h2>
     </div>
-    <div class="tc reveal">
-      <div class="stars">★★★★★</div>
-      <div class="ttext">之前腰背痛困擾我好幾年，在哈達課中學到正確的核心啟動方式，現在幾乎不再復發。這是真正改變生活的課。</div>
-      <div class="tauthor"><div class="av">陳</div><div><div class="aname">陳文哲</div><div class="ameta">學習 1 年 · 工程師</div></div></div>
+    <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+      <div class="review-stats">
+        <div class="big-rating" aria-label="評分4.9分">4.9</div>
+        <div class="rating-detail">
+          <div class="rating-stars" aria-hidden="true">★★★★★</div>
+          <div>87 則評價</div>
+          <div style="font-size:0.7rem;color:var(--sage);margin-top:0.1rem;">Google · Facebook · 直接回饋</div>
+        </div>
+      </div>
+      <button class="add-review-btn" onclick="openReviewModal()" aria-label="撰寫評價">留下你的心得 ✏️</button>
     </div>
-    <div class="tc reveal">
-      <div class="stars">★★★★★</div>
-      <div class="ttext">阿斯坦加只有45分鐘卻讓我大汗淋漓，完全不無聊！週六下午的課已經變成我每週最期待的事情。</div>
-      <div class="tauthor"><div class="av">王</div><div><div class="aname">王美君</div><div class="ameta">學習 8 個月 · 設計師</div></div></div>
+  </div>
+
+  <div class="carousel-wrap" aria-live="polite">
+    <div class="carousel-track" id="carTrack">
+      <!-- 靜態評價 -->
+      <div class="tc">
+        <div class="stars" aria-label="五星評價">★★★★★</div>
+        <p class="ttext">上了三個月的低空療愈課，身體柔軟度明顯改善，心情狀態也穩定了很多。小班制讓我每次都能得到老師的關注，這是在大型健身房完全感受不到的。</p>
+        <div class="tauthor"><div class="av" aria-hidden="true">林</div><div><div class="aname">林小雅</div><div class="ameta">學習 6 個月 · 上班族</div></div></div>
+      </div>
+      <div class="tc">
+        <div class="stars" aria-label="五星評價">★★★★★</div>
+        <p class="ttext">之前腰背痛困擾我好幾年，在哈達課中學到正確的核心啟動方式，現在幾乎不再復發。這是真正改變生活的課，不是只是運動而已。</p>
+        <div class="tauthor"><div class="av" aria-hidden="true">陳</div><div><div class="aname">陳文哲</div><div class="ameta">學習 1 年 · 工程師</div></div></div>
+      </div>
+      <div class="tc">
+        <div class="stars" aria-label="五星評價">★★★★★</div>
+        <p class="ttext">阿斯坦加只有45分鐘卻讓我大汗淋漓，完全不無聊！週六下午的課已經變成我每週最期待的事情，認識了好幾個志同道合的朋友。</p>
+        <div class="tauthor"><div class="av" aria-hidden="true">王</div><div><div class="aname">王美君</div><div class="ameta">學習 8 個月 · 設計師</div></div></div>
+      </div>
+      <div class="tc">
+        <div class="stars" aria-label="五星評價">★★★★★</div>
+        <p class="ttext">試過很多瑜伽課，這是第一個讓我覺得老師真的在看著我的地方。每次動作不到位，老師會輕輕幫我調整，不是叫我自己看別人。</p>
+        <div class="tauthor"><div class="av" aria-hidden="true">許</div><div><div class="aname">許雅婷</div><div class="ameta">學習 4 個月 · 護理師</div></div></div>
+      </div>
+      <div class="tc">
+        <div class="stars" aria-label="五星評價">★★★★★</div>
+        <p class="ttext">原本以為自己不適合練瑜伽，因為我連碰腳趾頭都碰不到。但低空療愈課完全不需要這些，一個月後居然開始有進步了！真心推薦給跟我一樣「硬底子」的朋友。</p>
+        <div class="tauthor"><div class="av" aria-hidden="true">張</div><div><div class="aname">張志明</div><div class="ameta">學習 2 個月 · 業務主管</div></div></div>
+      </div>
+      <div class="tc">
+        <div class="stars" aria-label="四星評價">★★★★☆</div>
+        <p class="ttext">月費制很划算，我一個月至少練 12 次，等於每堂不到 240 元。比去外面喝一杯咖啡還便宜，但效果好多了。唯一的小缺點是時間只有中午，希望以後可以增加早上的班。</p>
+        <div class="tauthor"><div class="av" aria-hidden="true">黃</div><div><div class="aname">黃怡君</div><div class="ameta">月費會員 · 自由工作者</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <button class="car-btn" onclick="carMove(-1)" aria-label="上一則評價">‹</button>
+    <div class="car-dots" id="carDots" role="tablist" aria-label="評價頁面指示"></div>
+    <button class="car-btn" onclick="carMove(1)" aria-label="下一則評價">›</button>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" aria-label="常見問題">
+  <div class="tag">常見問題</div>
+  <h2>你可能想<em>先問的</em></h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">完全沒練過瑜伽，真的沒關係嗎？</button>
+      <div class="faq-a" role="region"><p>完全沒問題。這門課就是為零基礎的人設計的，從第一天起不假設你有任何基礎，每個動作都有簡化版本，你只需要帶著身體來就好。</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">上課地點在哪裡？有停車位嗎？</button>
+      <div class="faq-a" role="region"><p>位於台北市東區，忠孝復興捷運站3號出口步行約1分鐘（私人健身中心，預約後提供詳細地址）。建議搭乘大眾運輸，附近亦有路邊停車位可使用。</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">月費制怎麼運作？可以暫停嗎？</button>
+      <div class="faq-a" role="region"><p>月費制為每月自動扣款，當月無限次上課（全課程適用）。若因出差或旅遊需要暫停，可提前7天告知，暫停期間不收費，最多可暫停2個月/年。</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">線上課程和實體課有什麼不同？</button>
+      <div class="faq-a" role="region"><p>實體課有老師即時觀察並調整你的動作，適合初學者建立正確基礎。線上課程則是錄製好的教學影片，方便你自己安排時間，特別適合想在家練習或行程不固定的學員。建議兩者搭配使用效果最好。</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">如何轉介朋友？獎勵怎麼計算？</button>
+      <div class="faq-a" role="region"><p>填寫預約表單或傳訊息給我，我會提供你的專屬轉介連結或代碼。朋友用你的代碼預約首堂課享 NT$299 優惠，你則獲得 1 堂免費課的點數，月底自動計入你的帳戶，沒有上限。</p></div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<div class="cta-band">
+<div class="cta-band" role="region" aria-label="行動呼籲">
   <div><h2>準備好開始了嗎？</h2><p>首堂體驗課特惠 NT$399，感受瑜伽帶給你的改變。</p></div>
   <a href="#booking" class="btn-white">預約首堂體驗課 →</a>
 </div>
@@ -549,25 +898,46 @@
       <div class="flogo">流動 <span>Yoga</span></div>
       <div class="fdesc">在每一次呼吸中，找到回歸自我的路。<br>台北市東區・忠孝復興3號出口步行1分鐘<br>每天中午 12:10・僅收 5 人</div>
       <div class="socials">
-        <a href="#" class="soc">IG</a><a href="#" class="soc">YT</a><a href="#" class="soc">FB</a><a href="#" class="soc">LINE</a>
+        <a href="#" class="soc" aria-label="Instagram">IG</a>
+        <a href="#" class="soc" aria-label="YouTube">YT</a>
+        <a href="#" class="soc" aria-label="Facebook">FB</a>
+        <a href="#" class="soc" aria-label="LINE">LINE</a>
       </div>
     </div>
-    <div class="fcol"><h4>我的課程</h4><ul><li><a href="#classes">低空療愈瑜伽</a></li><li><a href="#classes">全方位哈達瑜伽</a></li><li><a href="#classes">阿斯坦加基礎流動</a></li><li><a href="#booking">首堂體驗課</a></li></ul></div>
-    <div class="fcol"><h4>資源</h4><ul><li><a href="#videos">YouTube 頻道</a></li><li><a href="#products">電子書</a></li><li><a href="#products">居家練習手冊</a></li><li><a href="#products">冥想音頻</a></li></ul></div>
-    <div class="fcol"><h4>聯絡</h4><ul><li><a href="#">studio@flowyoga.tw</a></li><li><a href="#">0912-345-678</a></li><li><a href="#">LINE: @flowyoga</a></li><li><a href="#">台北市信義區</a></li></ul></div>
+    <nav class="fcol" aria-label="課程連結"><h4>我的課程</h4><ul>
+      <li><a href="#classes">低空療愈瑜伽</a></li>
+      <li><a href="#classes">全方位哈達瑜伽</a></li>
+      <li><a href="#classes">阿斯坦加基礎流動</a></li>
+      <li><a href="#booking">首堂體驗課</a></li>
+    </ul></nav>
+    <nav class="fcol" aria-label="資源連結"><h4>資源 &amp; 槓桿</h4><ul>
+      <li><a href="#membership">月費方案</a></li>
+      <li><a href="#online">線上課程</a></li>
+      <li><a href="#products">電子書</a></li>
+      <li><a href="#videos">YouTube 頻道</a></li>
+    </ul></nav>
+    <div class="fcol"><h4>聯絡</h4><ul>
+      <li><a href="mailto:studio@flowyoga.tw">studio@flowyoga.tw</a></li>
+      <li><a href="tel:+886912345678">0912-345-678</a></li>
+      <li><a href="#">LINE: @flowyoga</a></li>
+      <li><a href="#faq">常見問題</a></li>
+    </ul></div>
   </div>
-  <div class="fbot"><span>© 2025 流動瑜伽 Flow Yoga Studio</span><span>以愛與呼吸打造 🌿</span></div>
+  <div class="fbot">
+    <span>© 2025 流動瑜伽 Flow Yoga Studio · 台北市東區哈達瑜伽</span>
+    <span><a href="#" style="color:rgba(255,255,255,0.3);text-decoration:none;" onclick="openReviewModal()">留下評價</a> · 以愛與呼吸打造 🌿</span>
+  </div>
 </footer>
 
-<!-- MODAL -->
-<div class="modal-wrap" id="mwrap" onclick="mOut(event)">
+<!-- PURCHASE MODAL -->
+<div class="modal-wrap" id="mwrap" onclick="mOut(event)" role="dialog" aria-modal="true" aria-labelledby="mtitle">
   <div class="modal">
-    <button class="mx" onclick="mClose()">×</button>
+    <button class="mx" onclick="mClose()" aria-label="關閉">×</button>
     <div id="mcon">
       <h3 id="mtitle">購買數位產品</h3>
       <p>完成後，我們將在 10 分鐘內把下載連結寄到您的信箱。</p>
-      <div class="fg"><label>Email（接收下載連結）</label><input type="email" placeholder="your@email.com"></div>
-      <div class="fg"><label>付款方式</label><select><option>信用卡</option><option>LINE Pay</option><option>街口支付</option><option>銀行轉帳</option></select></div>
+      <div class="fg"><label for="m-email">Email（接收下載連結）</label><input id="m-email" type="email" placeholder="your@email.com"></div>
+      <div class="fg"><label for="m-pay">付款方式</label><select id="m-pay"><option>信用卡</option><option>LINE Pay</option><option>街口支付</option><option>銀行轉帳</option></select></div>
       <button class="sbtn" onclick="mDone()">確認付款 →</button>
     </div>
     <div class="mok" id="mok">
@@ -578,37 +948,197 @@
   </div>
 </div>
 
+<!-- REVIEW MODAL -->
+<div class="rmodal-wrap" id="rwrap" onclick="rOut(event)" role="dialog" aria-modal="true" aria-labelledby="rtitle">
+  <div class="rmodal">
+    <button class="rmx" onclick="rClose()" aria-label="關閉">×</button>
+    <div id="rcon">
+      <h3 id="rtitle">留下你的心得</h3>
+      <p>你的真實感受對其他人很有幫助。所有心得審核後即時顯示在網站上。</p>
+      <div style="margin-bottom:1rem;">
+        <div style="font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:0.5rem;">評分</div>
+        <div class="star-pick" id="starPick" role="group" aria-label="選擇星數評分">
+          <span onclick="setStar(1)" aria-label="1星">★</span>
+          <span onclick="setStar(2)" aria-label="2星">★</span>
+          <span onclick="setStar(3)" aria-label="3星">★</span>
+          <span onclick="setStar(4)" aria-label="4星">★</span>
+          <span onclick="setStar(5)" aria-label="5星">★</span>
+        </div>
+      </div>
+      <div class="fg"><label for="r-name">你的名字（會顯示在評價上）</label><input id="r-name" type="text" placeholder="例如：小雅 / 台北上班族"></div>
+      <div class="fg"><label for="r-course">上的課程</label>
+        <select id="r-course">
+          <option>低空療愈瑜伽</option><option>全方位哈達瑜伽</option><option>阿斯坦加基礎流動</option><option>線上課程</option><option>月費方案</option>
+        </select>
+      </div>
+      <div class="fg"><label for="r-text">心得（50字以上效果更好）</label><textarea id="r-text" rows="4" placeholder="分享你的真實感受，幫助更多想來上課的人..."></textarea></div>
+      <button class="sbtn" onclick="submitReview()">送出心得 →</button>
+    </div>
+    <div class="rok" id="rok">
+      <div class="ico">🌿</div>
+      <h4>感謝你的分享！</h4>
+      <p style="color:var(--mid);margin-top:0.6rem;font-size:0.85rem;">你的心得已經出現在頁面上了，<br>謝謝你願意幫助其他人。</p>
+    </div>
+  </div>
+</div>
+
 <script>
-  // Scroll reveal
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach((e,i) => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('on'), i*70); obs.unobserve(e.target); } });
-  }, {threshold:0.08});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// ── Scroll reveal ─────────────────────────────────────────────────────────
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e,i) => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('on'), i*70); obs.unobserve(e.target); } });
+}, {threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-  // Nav shadow
-  window.addEventListener('scroll', ()=>{
-    document.querySelector('nav').style.boxShadow = scrollY>40 ? '0 4px 24px rgba(44,36,22,0.08)' : 'none';
+// ── Nav shadow ────────────────────────────────────────────────────────────
+window.addEventListener('scroll', ()=>{
+  document.querySelector('nav').style.boxShadow = scrollY>40 ? '0 4px 24px rgba(44,36,22,0.08)' : 'none';
+});
+
+// ── Smooth anchor ─────────────────────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
   });
+});
 
-  // Smooth anchor
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', e=>{
-      const t=document.querySelector(a.getAttribute('href'));
-      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
-    });
+// ── Booking ───────────────────────────────────────────────────────────────
+function bookOk(btn){ btn.textContent='✓ 預約成功！我們將盡快與您聯繫'; btn.style.background='var(--sage)'; btn.disabled=true; }
+
+// ── YouTube ───────────────────────────────────────────────────────────────
+function goYT(id){ window.open('https://www.youtube.com/watch?v='+id,'_blank','noopener'); }
+
+// ── Purchase Modal ────────────────────────────────────────────────────────
+function openModal(t){ document.getElementById('mtitle').textContent=t; document.getElementById('mcon').style.display='block'; document.getElementById('mok').style.display='none'; document.getElementById('mwrap').classList.add('on'); }
+function mClose(){ document.getElementById('mwrap').classList.remove('on'); }
+function mOut(e){ if(e.target.id==='mwrap') mClose(); }
+function mDone(){ document.getElementById('mcon').style.display='none'; document.getElementById('mok').style.display='block'; }
+
+// ── FAQ accordion ─────────────────────────────────────────────────────────
+function toggleFaq(btn){
+  const item = btn.parentElement;
+  const ans = item.querySelector('.faq-a');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>{
+    i.classList.remove('open');
+    i.querySelector('.faq-a').style.maxHeight='0';
+    i.querySelector('.faq-q').setAttribute('aria-expanded','false');
   });
+  if(!isOpen){
+    item.classList.add('open');
+    ans.style.maxHeight = ans.scrollHeight + 'px';
+    btn.setAttribute('aria-expanded','true');
+  }
+}
 
-  // Booking
-  function bookOk(btn){ btn.textContent='✓ 預約成功！我們將盡快與您聯繫'; btn.style.background='var(--sage)'; btn.disabled=true; }
+// ══ 自動留言輪播 CAROUSEL ══════════════════════════════════════════════════
+const VISIBLE = window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+let carIdx = 0;
+let carTimer;
+const track = document.getElementById('carTrack');
+const dotsWrap = document.getElementById('carDots');
 
-  // YouTube
-  function goYT(id){ window.open('https://www.youtube.com/watch?v='+id,'_blank'); }
+function getCards(){ return track.querySelectorAll('.tc'); }
+function buildDots(){
+  const n = Math.max(1, getCards().length - VISIBLE + 1);
+  dotsWrap.innerHTML = '';
+  for(let i=0;i<n;i++){
+    const d = document.createElement('div');
+    d.className = 'car-dot' + (i===0?' on':'');
+    d.setAttribute('role','tab');
+    d.setAttribute('aria-label', `評價 ${i+1}`);
+    d.onclick = ()=>goTo(i);
+    dotsWrap.appendChild(d);
+  }
+}
+function goTo(i){
+  const cards = getCards();
+  const max = Math.max(0, cards.length - VISIBLE);
+  carIdx = Math.min(Math.max(i, 0), max);
+  const w = cards[0] ? cards[0].offsetWidth + 18 : 0;
+  track.style.transform = `translateX(-${carIdx * w}px)`;
+  dotsWrap.querySelectorAll('.car-dot').forEach((d,j)=>d.classList.toggle('on', j===carIdx));
+}
+function carMove(dir){ goTo(carIdx + dir); }
+function startAuto(){ carTimer = setInterval(()=>{ const max=Math.max(0,getCards().length-VISIBLE); goTo(carIdx<max?carIdx+1:0); }, 4500); }
+function stopAuto(){ clearInterval(carTimer); }
+track.addEventListener('mouseenter', stopAuto);
+track.addEventListener('mouseleave', startAuto);
+buildDots();
+startAuto();
 
-  // Modal
-  function openModal(t){ document.getElementById('mtitle').textContent=t; document.getElementById('mcon').style.display='block'; document.getElementById('mok').style.display='none'; document.getElementById('mwrap').classList.add('on'); }
-  function mClose(){ document.getElementById('mwrap').classList.remove('on'); }
-  function mOut(e){ if(e.target.id==='mwrap') mClose(); }
-  function mDone(){ document.getElementById('mcon').style.display='none'; document.getElementById('mok').style.display='block'; }
+// Touch/swipe support
+let txStart=0;
+track.addEventListener('touchstart',e=>{txStart=e.touches[0].clientX;stopAuto();},{passive:true});
+track.addEventListener('touchend',e=>{
+  const diff=txStart-e.changedTouches[0].clientX;
+  if(Math.abs(diff)>40) carMove(diff>0?1:-1);
+  startAuto();
+},{passive:true});
+
+// ══ Review submit ══════════════════════════════════════════════════════════
+let selectedStars = 5;
+function openReviewModal(){ document.getElementById('rcon').style.display='block'; document.getElementById('rok').style.display='none'; document.getElementById('rwrap').classList.add('on'); setStar(5); }
+function rClose(){ document.getElementById('rwrap').classList.remove('on'); }
+function rOut(e){ if(e.target.id==='rwrap') rClose(); }
+function setStar(n){
+  selectedStars = n;
+  document.querySelectorAll('.star-pick span').forEach((s,i)=>s.classList.toggle('on', i<n));
+}
+
+function submitReview(){
+  const name = document.getElementById('r-name').value.trim();
+  const text = document.getElementById('r-text').value.trim();
+  const course = document.getElementById('r-course').value;
+  if(!name || text.length < 10){ alert('請填寫名字與心得（至少10個字）'); return; }
+
+  // 顯示感謝畫面
+  document.getElementById('rcon').style.display='none';
+  document.getElementById('rok').style.display='block';
+
+  // 新增到輪播
+  const stars = '★'.repeat(selectedStars) + '☆'.repeat(5-selectedStars);
+  const initial = name.charAt(0);
+  const card = document.createElement('div');
+  card.className = 'tc new-review reveal';
+  card.innerHTML = `
+    <div class="new-badge">剛剛</div>
+    <div class="stars" aria-label="${selectedStars}星評價">${stars}</div>
+    <p class="ttext">${text.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</p>
+    <div class="tauthor">
+      <div class="av" aria-hidden="true">${initial}</div>
+      <div><div class="aname">${name.replace(/</g,'&lt;')}</div><div class="ameta">${course} · 剛完成課程</div></div>
+    </div>`;
+  track.appendChild(card);
+  setTimeout(()=>card.classList.add('on'), 100);
+  buildDots();
+
+  // 存到 localStorage
+  const saved = JSON.parse(localStorage.getItem('yoga_reviews') || '[]');
+  saved.push({ name, text, course, stars: selectedStars, time: new Date().toISOString() });
+  localStorage.setItem('yoga_reviews', JSON.stringify(saved));
+
+  setTimeout(rClose, 2200);
+}
+
+// 載入 localStorage 中的評價
+(function loadSavedReviews(){
+  const saved = JSON.parse(localStorage.getItem('yoga_reviews') || '[]');
+  saved.forEach(r => {
+    const stars = '★'.repeat(r.stars) + '☆'.repeat(5-r.stars);
+    const card = document.createElement('div');
+    card.className = 'tc';
+    card.innerHTML = `
+      <div class="stars">${stars}</div>
+      <p class="ttext">${r.text.replace(/</g,'&lt;')}</p>
+      <div class="tauthor">
+        <div class="av">${r.name.charAt(0)}</div>
+        <div><div class="aname">${r.name.replace(/</g,'&lt;')}</div><div class="ameta">${r.course}</div></div>
+      </div>`;
+    track.appendChild(card);
+  });
+  if(saved.length) buildDots();
+})();
 </script>
 </body>
 </html>
