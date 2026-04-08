@@ -135,6 +135,29 @@
   }
   .course-item-val { font-size:0.95rem; color:var(--deep); line-height:1.6; }
 
+  /* THREE COURSES */
+  #courses { background:var(--warm-white); }
+  .courses-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:3.5rem;
+  }
+  .cls {
+    border-top:2px solid var(--terracotta); padding-top:1.8rem;
+  }
+  .cls-name {
+    font-family:var(--serif); font-size:1.3rem; color:var(--deep);
+    margin-bottom:0.9rem; line-height:1.3;
+  }
+  .cls-desc {
+    font-size:0.88rem; line-height:1.85; color:var(--mid); margin-bottom:1.4rem;
+  }
+  .cls-tag {
+    font-size:0.66rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--sage);
+  }
+  @media(max-width:768px) {
+    .courses-grid { grid-template-columns:1fr; }
+  }
+
   /* VIDEO */
   #video { background:var(--deep); }
   #video h2 { color:white; }
@@ -232,22 +255,22 @@
 <!-- HERO -->
 <section class="hero" id="home" aria-label="首頁">
   <div class="eyebrow">哈達瑜伽 · 放鬆延展 · 台北東區</div>
-  <h1>不必跟任何人<br><em>比較</em></h1>
+  <h1>讓身體<br><em>好好喘口氣</em></h1>
   <p class="hero-desc">
-    這裡只有五個人。<br>
-    沒有鏡子牆，沒有人在看你，沒有需要撐起來的樣子。<br>
-    只是好好呼吸，讓身體慢慢鬆開。
+    不是來這裡表現的，是來這裡釋放的。<br>
+    一個安靜的小空間，五個人，沒有競爭，沒有評分。<br>
+    從哈達瑜伽的放鬆延展開始，讓壓力有個出口。
   </p>
   <a href="#booking" class="btn">預約首堂體驗</a>
 </section>
 
 <div class="divider"></div>
 
-<!-- COURSE -->
-<section id="course" aria-label="課程介紹">
+<!-- COURSE MAIN -->
+<section id="course" aria-label="主打課程">
   <div class="label">主打課程</div>
   <h2><em>低空療愈伸展</em></h2>
-  <p class="body-text">全程貼近地面。身體的重量交給地板，讓緊繃一層一層鬆開，同時輕輕喚醒你的核心力量。不用撐，不用努力——只是讓身體記起它本來的樣子。</p>
+  <p class="body-text">全程貼近地面的哈達瑜伽序列。身體的重量交給地板，讓緊繃一層一層溶解，同時溫柔地喚醒核心肌肉。下課後你會感覺——輕了。</p>
 
   <div class="course-grid">
     <div class="course-detail reveal">
@@ -256,12 +279,12 @@
         <div class="course-item-val">每堂 50 分鐘<br>11:30–12:20 &nbsp;／&nbsp; 12:20–13:10</div>
       </div>
       <div class="course-item">
-        <div class="course-item-label">班級人數</div>
+        <div class="course-item-label">療愈小班</div>
         <div class="course-item-val">最多 5 人<br>老師看得到每一個你</div>
       </div>
       <div class="course-item">
         <div class="course-item-label">特別適合</div>
-        <div class="course-item-val">身體很硬、覺得自己沒力氣<br>不想去健身房跟人比較的你</div>
+        <div class="course-item-val">壓力大、睡不好、身體緊繃<br>想從健身房的喧囂中抽身的你</div>
       </div>
       <div class="course-item">
         <div class="course-item-label">地點</div>
@@ -271,11 +294,40 @@
 
     <div class="reveal" style="padding-top:0.5rem;">
       <p class="body-text" style="margin-bottom:2rem; font-size:0.9rem;">
-        健身房裡，你要跟上別人的速度，要讓自己看起來「有在練」。<br><br>
-        這裡不一樣。五個人，一起安靜地呼吸。沒有人在評分，沒有人在比較。每個動作，就只是為了你自己。
+        健身房的節奏是比拚，這裡的節奏是呼吸。<br><br>
+        你不需要跟上任何人，不需要做出什麼樣子。每個動作都是你給自己的一點療愈——讓堆積在身體裡的壓力，慢慢有個去處。
       </p>
       <a href="#booking" class="btn">預約體驗課</a>
     </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- THREE COURSES -->
+<section id="courses" aria-label="所有課程">
+  <div class="label">課程選擇</div>
+  <h2>三種練習<em>方式</em></h2>
+  <div class="courses-grid">
+
+    <div class="cls reveal">
+      <div class="cls-name">低空療愈伸展</div>
+      <p class="cls-desc">全程貼地，深度放鬆筋膜，溫柔喚醒核心。給壓力大、身體緊繃、需要好好被照顧的你。</p>
+      <div class="cls-tag">50 分鐘 · 每天 11:30 & 12:20 · 5 人小班</div>
+    </div>
+
+    <div class="cls reveal">
+      <div class="cls-name">哈達瑜伽<br>放鬆延展</div>
+      <p class="cls-desc">回到哈達瑜伽最根本的呼吸與體式。舒展全身、沉澱心情，練完了感覺整個人重新被整理過。</p>
+      <div class="cls-tag">50 分鐘 · 5 人小班</div>
+    </div>
+
+    <div class="cls reveal">
+      <div class="cls-name">哈達拜日式<br>108 次循環</div>
+      <p class="cls-desc">用拜日式的韻律讓身體進入心流狀態。動作固定、呼吸引導，讓思緒靜下來，讓身體動起來。</p>
+      <div class="cls-tag">可循環 108 次 · 依個人節奏</div>
+    </div>
+
   </div>
 </section>
 
@@ -363,10 +415,10 @@
 <!-- BOOKING -->
 <section id="booking" aria-label="預約">
   <div class="label" style="color:rgba(255,255,255,0.5);">開始練習</div>
-  <h2>給自己<em>一個小時</em></h2>
+  <h2>給自己<em>一個出口</em></h2>
   <p class="body-text">
-    不必準備任何事，不必有任何基礎。<br>
-    五個人，安靜的空間，只屬於你自己的一小時。
+    不需要準備任何事。<br>
+    來感受一次，讓身體告訴你它需要什麼。
   </p>
   <a href="https://www.instagram.com/flowyoga.tw" target="_blank" rel="noopener" class="btn-white">Instagram 私訊預約</a>
 </section>
