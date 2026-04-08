@@ -139,8 +139,11 @@
   #video { background:var(--deep); }
   #video h2 { color:white; }
   #video .body-text { color:rgba(255,255,255,0.5); margin-bottom:3rem; }
+  .video-row {
+    display:flex; gap:2rem; flex-wrap:wrap;
+  }
   .video-wrap {
-    max-width:400px;
+    width:300px; flex-shrink:0;
     aspect-ratio:9/16;
     background:#000;
     overflow:hidden;
@@ -206,7 +209,8 @@
     section { padding:5rem 1.5rem; }
     .divider { margin:0 1.5rem; }
     .course-grid, .teacher-grid { grid-template-columns:1fr; gap:3rem; }
-    .video-wrap { max-width:100%; aspect-ratio:9/16; }
+    .video-row { flex-direction:column; }
+    .video-wrap { width:100%; aspect-ratio:9/16; }
     footer { padding:2.5rem 1.5rem; flex-direction:column; align-items:flex-start; }
     .finfo { text-align:left; }
   }
@@ -277,13 +281,23 @@
   <div class="label" style="color:rgba(255,255,255,0.4);">看看課程</div>
   <h2>感受一下<br><em>什麼是低空療愈伸展</em></h2>
   <p class="body-text">不用說太多，看一眼就知道。</p>
-  <div class="video-wrap reveal">
-    <iframe
-      src="https://www.youtube.com/embed/HahrAznkdS8"
-      title="低空療愈伸展示範"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
+  <div class="video-row">
+    <div class="video-wrap reveal">
+      <iframe
+        src="https://www.youtube.com/embed/HahrAznkdS8"
+        title="低空療愈伸展示範"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-wrap reveal">
+      <iframe
+        src="https://www.youtube.com/embed/sZPPRHt19Kg"
+        title="低空療愈伸展示範 2"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 </section>
 
