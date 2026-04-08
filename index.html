@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jadewen Yoga · 身體僵硬也能練 · 台北小班瑜伽</title>
-<meta name="description" content="不需要柔軟，不需要基礎，只需要願意。台北東區小班瑜伽，每堂最多5人，首堂體驗NT$399。">
+<title>Jadewen Yoga · 空中瑜伽 · 台北小班制</title>
+<meta name="description" content="不需要柔軟，不需要基礎，只需要願意。台北東區空中瑜伽小班，每堂最多5人，首堂體驗NT$399。">
 
 <style>
 :root {
@@ -12,12 +12,13 @@
   --warm:   #FDFAF4;
   --terra:  #C4785A;
   --sage:   #7A8C72;
-  --deep:   #2C2416;
+  --deep:   #1A1410;
   --mid:    #5C4A32;
-  --gold:   #B8975A;
-  --serif:  Georgia, 'Times New Roman', serif;
+  --gold:   #C8A96E;
+  --serif:  'Georgia', 'Times New Roman', serif;
   --sans:   -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
+
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { font-family:var(--sans); background:var(--warm); color:var(--deep); overflow-x:hidden; }
@@ -25,164 +26,280 @@ body { font-family:var(--sans); background:var(--warm); color:var(--deep); overf
 /* ── NAV ── */
 nav {
   position:fixed; top:0; left:0; right:0; z-index:100;
-  padding:1rem 2rem; display:flex; align-items:center; justify-content:space-between;
-  background:rgba(253,250,244,0.95); backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(196,120,90,0.12);
+  padding:1.2rem 3rem; display:flex; align-items:center; justify-content:space-between;
+  transition: background 0.4s, padding 0.4s;
 }
-.logo { font-family:var(--serif); font-size:1.25rem; color:var(--deep); text-decoration:none; }
-.logo span { color:var(--terra); font-style:italic; }
+nav.scrolled {
+  background:rgba(26,20,16,0.92); backdrop-filter:blur(12px);
+  padding:0.8rem 3rem;
+  border-bottom:1px solid rgba(200,169,110,0.12);
+}
+.logo {
+  font-family:var(--serif); font-size:1.3rem; color:white; text-decoration:none;
+  letter-spacing:0.04em;
+}
+.logo span { color:var(--gold); font-style:italic; }
+.nav-links { display:flex; align-items:center; gap:2.5rem; }
+.nav-links a {
+  color:rgba(255,255,255,0.75); text-decoration:none; font-size:0.82rem;
+  letter-spacing:0.1em; text-transform:uppercase; transition:color 0.3s;
+}
+.nav-links a:hover { color:var(--gold); }
 .nav-cta {
-  background:var(--terra); color:white; padding:0.55rem 1.4rem;
-  text-decoration:none; font-size:0.82rem; letter-spacing:0.06em;
-  border-radius:2px; transition:background 0.3s;
+  background:transparent; color:white !important;
+  padding:0.6rem 1.6rem; border:1px solid rgba(200,169,110,0.6);
+  font-size:0.78rem !important; letter-spacing:0.12em !important;
+  border-radius:1px; transition:all 0.3s !important;
 }
-.nav-cta:hover { background:var(--deep); }
+.nav-cta:hover { background:var(--gold) !important; border-color:var(--gold) !important; color:var(--deep) !important; }
 
 /* ── HERO ── */
 .hero {
-  min-height:100vh; padding:7rem 2rem 5rem;
+  position:relative; min-height:100vh;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  text-align:center; background:linear-gradient(160deg, var(--warm) 0%, var(--cream) 100%);
+  text-align:center; overflow:hidden;
+}
+.hero-bg {
+  position:absolute; inset:0; z-index:0;
+  background-image: url('https://source.unsplash.com/bGmvg9KoAHU/1920x1080');
+  background-size:cover; background-position:center 30%;
+  transform:scale(1.05);
+  animation: slowzoom 20s ease-in-out infinite alternate;
+}
+@keyframes slowzoom {
+  from { transform:scale(1.05) translateY(0); }
+  to   { transform:scale(1.12) translateY(-2%); }
+}
+.hero-overlay {
+  position:absolute; inset:0; z-index:1;
+  background: linear-gradient(
+    to bottom,
+    rgba(26,20,16,0.35) 0%,
+    rgba(26,20,16,0.55) 50%,
+    rgba(26,20,16,0.8) 100%
+  );
+}
+.hero-content {
+  position:relative; z-index:2;
+  padding:2rem;
+  max-width:760px;
 }
 .hero-tag {
-  display:inline-block; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase;
-  color:var(--sage); margin-bottom:1.5rem;
-  padding:0.3rem 1rem; border:1px solid rgba(122,140,114,0.35); border-radius:20px;
+  display:inline-block; font-size:0.7rem; letter-spacing:0.28em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:2rem;
+  padding:0.35rem 1.2rem; border:1px solid rgba(200,169,110,0.4); border-radius:20px;
 }
 .hero h1 {
-  font-family:var(--serif); font-size:clamp(2.4rem,6vw,4.2rem);
-  font-weight:400; line-height:1.2; color:var(--deep); margin-bottom:1rem;
+  font-family:var(--serif); font-size:clamp(2.8rem,6vw,5rem);
+  font-weight:400; line-height:1.15; color:white; margin-bottom:1.2rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
-.hero h1 em { color:var(--terra); font-style:italic; }
+.hero h1 em { color:var(--gold); font-style:italic; }
 .hero-sub {
-  font-size:1.05rem; color:var(--mid); margin-bottom:0.8rem;
-  font-family:var(--serif); font-style:italic;
+  font-size:1rem; color:rgba(255,255,255,0.7); margin-bottom:1.2rem;
+  letter-spacing:0.08em;
 }
 .hero-desc {
-  font-size:0.95rem; line-height:1.9; color:var(--mid);
-  max-width:520px; margin:0 auto 2.5rem;
+  font-size:0.95rem; line-height:2; color:rgba(255,255,255,0.65);
+  max-width:480px; margin:0 auto 3rem;
 }
-.hero-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+.hero-btns { display:flex; gap:1.2rem; justify-content:center; flex-wrap:wrap; }
 .btn-fill {
-  background:var(--terra); color:white; padding:0.95rem 2rem;
-  text-decoration:none; font-size:0.85rem; letter-spacing:0.08em;
-  border-radius:2px; transition:background 0.3s;
+  background:var(--gold); color:var(--deep); padding:1rem 2.4rem;
+  text-decoration:none; font-size:0.82rem; letter-spacing:0.1em;
+  border-radius:1px; transition:all 0.3s; font-weight:600;
 }
-.btn-fill:hover { background:var(--deep); }
+.btn-fill:hover { background:white; }
 .btn-ghost {
-  border:1.5px solid var(--terra); color:var(--terra); padding:0.9rem 1.8rem;
-  text-decoration:none; font-size:0.85rem; letter-spacing:0.08em;
-  border-radius:2px; transition:all 0.3s; background:transparent;
+  border:1px solid rgba(255,255,255,0.4); color:white; padding:1rem 2.2rem;
+  text-decoration:none; font-size:0.82rem; letter-spacing:0.1em;
+  border-radius:1px; transition:all 0.3s; background:transparent;
 }
-.btn-ghost:hover { background:var(--terra); color:white; }
+.btn-ghost:hover { border-color:var(--gold); color:var(--gold); }
+
+/* Hero scroll indicator */
+.scroll-hint {
+  position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%);
+  z-index:2; display:flex; flex-direction:column; align-items:center; gap:0.5rem;
+  color:rgba(255,255,255,0.4); font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
+  animation: bounce 2s ease-in-out infinite;
+}
+.scroll-hint::after {
+  content:''; display:block; width:1px; height:40px;
+  background:linear-gradient(to bottom, rgba(200,169,110,0.6), transparent);
+}
+@keyframes bounce {
+  0%,100% { transform:translateX(-50%) translateY(0); }
+  50%      { transform:translateX(-50%) translateY(6px); }
+}
 
 /* ── QUICK FACTS ── */
 .facts {
   background:var(--deep); display:grid;
-  grid-template-columns:repeat(4,1fr); text-align:center; padding:2.5rem 2rem;
+  grid-template-columns:repeat(4,1fr); text-align:center;
+  padding:3rem 2rem; gap:0;
 }
-.fact-n { font-family:var(--serif); font-size:2.4rem; color:var(--terra); line-height:1; }
-.fact-l { font-size:0.68rem; letter-spacing:0.14em; color:rgba(255,255,255,0.4); text-transform:uppercase; margin-top:0.4rem; }
+.fact-item {
+  padding:1.5rem 1rem; border-right:1px solid rgba(255,255,255,0.06);
+}
+.fact-item:last-child { border-right:none; }
+.fact-n { font-family:var(--serif); font-size:2.6rem; color:var(--gold); line-height:1; }
+.fact-l { font-size:0.64rem; letter-spacing:0.16em; color:rgba(255,255,255,0.35); text-transform:uppercase; margin-top:0.5rem; }
+
+/* ── ABOUT / IMMERSIVE SECTION ── */
+.immersive {
+  position:relative; min-height:70vh;
+  display:flex; align-items:center; overflow:hidden;
+}
+.immersive-bg {
+  position:absolute; inset:0;
+  background-image: url('https://source.unsplash.com/CXynE3vOA0I/1920x1080');
+  background-size:cover; background-position:center;
+  background-attachment:fixed;
+}
+.immersive-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to right, rgba(26,20,16,0.92) 45%, rgba(26,20,16,0.3) 100%);
+}
+.immersive-content {
+  position:relative; z-index:2;
+  padding:5rem 3rem 5rem 8%;
+  max-width:600px;
+}
+.immersive-content .sec-tag { color:var(--gold); opacity:0.7; }
+.immersive-content h2 { color:white; margin-bottom:1.2rem; }
+.immersive-content p {
+  color:rgba(255,255,255,0.65); font-size:0.95rem; line-height:2;
+  margin-bottom:1rem;
+}
 
 /* ── SECTION BASE ── */
-section { padding:5rem 2rem; max-width:860px; margin:0 auto; }
+section { padding:6rem 2rem; max-width:880px; margin:0 auto; }
 .sec-tag {
-  font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;
-  color:var(--sage); margin-bottom:0.8rem; display:block;
+  font-size:0.65rem; letter-spacing:0.25em; text-transform:uppercase;
+  color:var(--sage); margin-bottom:1rem; display:block;
 }
-h2 { font-family:var(--serif); font-size:clamp(1.8rem,4vw,2.8rem); font-weight:400; line-height:1.25; margin-bottom:1rem; }
+h2 { font-family:var(--serif); font-size:clamp(1.9rem,4vw,3rem); font-weight:400; line-height:1.2; margin-bottom:1.2rem; }
 h2 em { color:var(--terra); font-style:italic; }
-.lead { font-size:0.95rem; line-height:1.9; color:var(--mid); margin-bottom:2.5rem; }
+.lead { font-size:0.95rem; line-height:2; color:var(--mid); margin-bottom:3rem; }
 
 /* ── REASONS ── */
-.reasons-wrap { background:var(--cream); padding:5rem 2rem; }
-.reasons { max-width:860px; margin:0 auto; }
-.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2rem; }
+.reasons-wrap { background:var(--cream); padding:6rem 2rem; }
+.reasons { max-width:880px; margin:0 auto; }
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:2.5rem; }
 .card {
-  background:white; padding:2rem 1.6rem;
-  border-top:3px solid var(--terra); border-radius:2px;
+  background:white; padding:2.5rem 2rem;
+  border-top:2px solid var(--gold); border-radius:2px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.card-ico { font-size:2rem; margin-bottom:1rem; }
-.card h3 { font-family:var(--serif); font-size:1.15rem; color:var(--deep); margin-bottom:0.6rem; }
-.card p { font-size:0.88rem; line-height:1.8; color:var(--mid); }
+.card:hover { transform:translateY(-4px); box-shadow:0 8px 40px rgba(0,0,0,0.1); }
+.card-ico { font-size:2.2rem; margin-bottom:1.2rem; }
+.card h3 { font-family:var(--serif); font-size:1.2rem; color:var(--deep); margin-bottom:0.7rem; }
+.card p { font-size:0.87rem; line-height:1.9; color:var(--mid); }
 
 /* ── VIDEOS ── */
-.videos-wrap { background:var(--deep); padding:5rem 2rem; }
-.videos-inner { max-width:960px; margin:0 auto; }
+.videos-wrap {
+  position:relative; padding:6rem 2rem; overflow:hidden;
+}
+.videos-bg {
+  position:absolute; inset:0;
+  background-image: url('https://source.unsplash.com/rFwi1PFeAoU/1920x1080');
+  background-size:cover; background-position:center;
+  background-attachment:fixed;
+  filter:brightness(0.25);
+}
+.videos-inner { position:relative; z-index:2; max-width:980px; margin:0 auto; }
 .videos-inner h2 { color:white; }
-.videos-inner .lead { color:rgba(255,255,255,0.5); }
-.vid-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:2rem; }
-.vid-frame { aspect-ratio:16/9; border-radius:4px; overflow:hidden; }
+.videos-inner .sec-tag { color:rgba(200,169,110,0.7); }
+.videos-inner .lead { color:rgba(255,255,255,0.45); }
+.vid-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2.5rem; }
+.vid-frame {
+  aspect-ratio:16/9; border-radius:3px; overflow:hidden;
+  box-shadow:0 8px 40px rgba(0,0,0,0.5);
+}
 .vid-frame iframe { width:100%; height:100%; border:none; }
 .yt-link {
   display:inline-flex; align-items:center; gap:0.6rem;
-  background:#FF0000; color:white; padding:0.8rem 1.8rem;
-  text-decoration:none; font-size:0.82rem; letter-spacing:0.06em;
-  border-radius:2px; margin-top:2rem; transition:opacity 0.3s;
+  background:#FF0000; color:white; padding:0.9rem 2rem;
+  text-decoration:none; font-size:0.8rem; letter-spacing:0.08em;
+  border-radius:2px; margin-top:2.5rem; transition:opacity 0.3s;
 }
 .yt-link:hover { opacity:0.85; }
 
 /* ── CLASS INFO ── */
 .class-box {
-  background:var(--cream); border-radius:4px; padding:2.5rem;
-  display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:2rem;
+  background:var(--cream); border-radius:3px; padding:3rem;
+  display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; margin-top:2.5rem;
+  box-shadow:0 4px 40px rgba(0,0,0,0.07);
 }
-.info-item { display:flex; gap:1rem; align-items:flex-start; margin-bottom:1.2rem; }
-.info-ico { font-size:1.4rem; flex-shrink:0; }
-.info-label { font-size:0.66rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--sage); }
-.info-val { font-size:0.95rem; color:var(--deep); margin-top:0.2rem; line-height:1.5; }
+.info-item { display:flex; gap:1.2rem; align-items:flex-start; margin-bottom:1.6rem; }
+.info-ico { font-size:1.4rem; flex-shrink:0; margin-top:0.1rem; }
+.info-label { font-size:0.62rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); }
+.info-val { font-size:0.93rem; color:var(--deep); margin-top:0.3rem; line-height:1.6; }
 .info-val strong { color:var(--terra); }
 .try-box {
-  background:var(--terra); color:white; padding:2rem 2.5rem;
-  border-radius:2px; text-align:center; margin-top:1.5rem;
+  background:linear-gradient(135deg, var(--terra) 0%, #a05a3e 100%);
+  color:white; padding:3rem 2.5rem;
+  border-radius:2px; text-align:center; margin-top:2rem;
+  box-shadow:0 8px 40px rgba(196,120,90,0.3);
 }
-.try-box h3 { font-family:var(--serif); font-size:1.6rem; margin-bottom:0.4rem; }
-.try-box p { font-size:0.88rem; opacity:0.88; margin-bottom:1.2rem; line-height:1.7; }
+.try-box h3 { font-family:var(--serif); font-size:2rem; margin-bottom:0.6rem; }
+.try-box p { font-size:0.9rem; opacity:0.88; margin-bottom:1.5rem; line-height:1.8; }
 .try-btn {
   display:inline-block; background:white; color:var(--terra);
-  padding:0.8rem 2rem; text-decoration:none; font-size:0.82rem;
-  letter-spacing:0.08em; border-radius:2px; transition:all 0.3s;
+  padding:0.9rem 2.4rem; text-decoration:none; font-size:0.82rem;
+  letter-spacing:0.1em; border-radius:1px; font-weight:600; transition:all 0.3s;
 }
 .try-btn:hover { background:var(--deep); color:white; }
 
 /* ── FAQ ── */
-.faq-wrap { background:var(--cream); padding:5rem 2rem; }
+.faq-wrap { background:var(--cream); padding:6rem 2rem; }
 .faq-inner { max-width:700px; margin:0 auto; }
-.faq-item { border-bottom:1px solid rgba(92,74,50,0.15); }
+.faq-item { border-bottom:1px solid rgba(92,74,50,0.12); }
 .faq-q {
   width:100%; background:none; border:none; text-align:left;
-  padding:1.2rem 0; font-family:var(--serif); font-size:1rem;
+  padding:1.4rem 0; font-family:var(--serif); font-size:1.05rem;
   color:var(--deep); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem;
 }
-.faq-q::after { content:'+'; font-size:1.4rem; color:var(--terra); flex-shrink:0; transition:transform 0.3s; }
+.faq-q::after { content:'+'; font-size:1.6rem; color:var(--gold); flex-shrink:0; transition:transform 0.3s; }
 .faq-item.open .faq-q::after { transform:rotate(45deg); }
 .faq-a { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
-.faq-a p { padding:0 0 1.2rem; font-size:0.9rem; line-height:1.85; color:var(--mid); }
+.faq-a p { padding:0 0 1.4rem; font-size:0.9rem; line-height:2; color:var(--mid); }
 
 /* ── CONTACT ── */
-.contact-wrap { background:var(--deep); padding:5rem 2rem; text-align:center; }
-.contact-wrap h2 { color:white; margin-bottom:0.8rem; }
-.contact-wrap p { color:rgba(255,255,255,0.6); font-size:0.95rem; margin-bottom:2rem; }
+.contact-wrap {
+  position:relative; padding:7rem 2rem; text-align:center; overflow:hidden;
+}
+.contact-bg {
+  position:absolute; inset:0;
+  background-image: url('https://source.unsplash.com/bGmvg9KoAHU/1920x1080');
+  background-size:cover; background-position:center top;
+  filter:brightness(0.15) saturate(0.5);
+}
+.contact-content { position:relative; z-index:2; }
+.contact-wrap h2 { color:white; font-family:var(--serif); font-weight:400; margin-bottom:0.8rem; }
+.contact-wrap p { color:rgba(255,255,255,0.5); font-size:0.95rem; margin-bottom:2.5rem; line-height:1.8; }
 .contact-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
 .contact-btn {
-  padding:0.9rem 2rem; font-size:0.85rem; letter-spacing:0.06em;
+  padding:1rem 2.2rem; font-size:0.82rem; letter-spacing:0.08em;
   text-decoration:none; border-radius:2px; transition:all 0.3s;
 }
 .btn-line { background:#06C755; color:white; }
 .btn-line:hover { opacity:0.85; }
 .btn-ig { background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:white; }
 .btn-ig:hover { opacity:0.85; }
-.btn-email { border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.7); background:transparent; }
-.btn-email:hover { border-color:var(--terra); color:var(--terra); }
+.btn-email { border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.6); background:transparent; }
+.btn-email:hover { border-color:var(--gold); color:var(--gold); }
 
 /* ── FOOTER ── */
 footer {
-  background:var(--deep); border-top:1px solid rgba(255,255,255,0.06);
-  padding:2rem; text-align:center;
-  font-size:0.78rem; color:rgba(255,255,255,0.28);
+  background:var(--deep); border-top:1px solid rgba(255,255,255,0.05);
+  padding:2.5rem; text-align:center;
+  font-size:0.75rem; color:rgba(255,255,255,0.2);
 }
-footer a { color:rgba(255,255,255,0.4); text-decoration:none; }
-footer a:hover { color:var(--terra); }
+footer a { color:rgba(255,255,255,0.35); text-decoration:none; transition:color 0.3s; }
+footer a:hover { color:var(--gold); }
 
 /* ── RESPONSIVE ── */
 @media(max-width:768px) {
@@ -190,48 +307,96 @@ footer a:hover { color:var(--terra); }
   .cards { grid-template-columns:1fr; }
   .vid-grid { grid-template-columns:1fr; }
   .class-box { grid-template-columns:1fr; gap:0; }
+  .immersive-bg { background-attachment:scroll; }
+  .videos-bg { background-attachment:scroll; }
+  nav { padding:1rem 1.5rem; }
+  nav.scrolled { padding:0.7rem 1.5rem; }
+  .nav-links { display:none; }
+  .immersive-content { padding:5rem 1.5rem; max-width:100%; }
 }
 @media(max-width:480px) {
-  .hero h1 { font-size:2.2rem; }
-  nav { padding:0.8rem 1.2rem; }
+  .hero h1 { font-size:2.4rem; }
+  .fact-n { font-size:2rem; }
 }
 
-/* ── FADE IN ── */
-.reveal { opacity:0; transform:translateY(20px); transition:opacity 0.6s,transform 0.6s; }
+/* ── SUTRA CITATION ── */
+.sutra-tag {
+  display:inline-block; font-size:0.7rem; letter-spacing:0.18em;
+  color:rgba(200,169,110,0.55); margin-bottom:1.8rem;
+  font-family:var(--serif); font-style:italic;
+}
+.hero-citation {
+  margin-top:1.8rem; margin-bottom:2.4rem;
+  padding:1rem 1.4rem;
+  border-left:2px solid rgba(200,169,110,0.35);
+  text-align:left; max-width:420px; margin-left:auto; margin-right:auto;
+}
+.hero-citation p {
+  font-size:0.78rem; color:rgba(255,255,255,0.38); line-height:1.7;
+  font-style:italic; letter-spacing:0.03em;
+}
+.hero-citation cite {
+  display:block; margin-top:0.5rem;
+  font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase;
+  color:rgba(200,169,110,0.45); font-style:normal;
+}
+
+/* ── REVEAL ── */
+.reveal { opacity:0; transform:translateY(28px); transition:opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1); }
 .reveal.on { opacity:1; transform:none; }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<nav id="nav">
   <a href="#" class="logo">Jadewen <span>Yoga</span></a>
-  <a href="#contact" class="nav-cta">聯絡我</a>
+  <div class="nav-links">
+    <a href="#class">課程</a>
+    <a href="#videos">影片</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="nav-cta">預約體驗</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-tag">台北 · 小班制 · 零基礎歡迎</div>
-  <h1>身體很僵硬？<br><em>來試試看就好</em></h1>
-  <p class="hero-sub">不需要柔軟 · 不需要基礎 · 只需要願意</p>
-  <p class="hero-desc">
-    瑜伽不是給柔軟的人練的。<br>
-    它是讓不柔軟的人，慢慢找回身體的感覺。<br><br>
-    這裡每堂最多 5 個人，你不會被比較、不會被催促，
-    老師有時間注意到你、陪你一起慢慢來。
-  </p>
-  <div class="hero-btns">
-    <a href="#contact" class="btn-fill">預約體驗課 NT$399</a>
-    <a href="#videos" class="btn-ghost">先看看上課影片</a>
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="sutra-tag">prayatna-śaithilya-ananta-samāpattibhyām</div>
+    <h1>放鬆每一分用力，<br><em>讓心融入無限</em></h1>
+    <p class="hero-sub">當你放鬆穩定，就不容易被外界消耗</p>
+    <div class="hero-citation">
+      <p>透過放鬆一切過度的用力，並使心融入於無限之中，體位與身心便達到輕鬆安穩的狀態。</p>
+      <cite>《瑜伽經》Sādhana Pāda · 2.47 &nbsp;·&nbsp; 台北 · 空中瑜伽 · 小班制</cite>
+    </div>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-fill">預約體驗課 NT$399</a>
+      <a href="#videos" class="btn-ghost">先看看上課影片</a>
+    </div>
   </div>
+  <div class="scroll-hint">向下捲動</div>
 </div>
 
 <!-- QUICK FACTS -->
 <div class="facts">
-  <div class="reveal"><div class="fact-n">5</div><div class="fact-l">每堂最多人數</div></div>
-  <div class="reveal"><div class="fact-n">NT$399</div><div class="fact-l">首堂體驗價</div></div>
-  <div class="reveal"><div class="fact-n">零</div><div class="fact-l">基礎要求</div></div>
-  <div class="reveal"><div class="fact-n">1分鐘</div><div class="fact-l">忠孝復興站</div></div>
+  <div class="fact-item reveal"><div class="fact-n">5</div><div class="fact-l">每堂最多人數</div></div>
+  <div class="fact-item reveal"><div class="fact-n">NT$399</div><div class="fact-l">首堂體驗價</div></div>
+  <div class="fact-item reveal"><div class="fact-n">零</div><div class="fact-l">基礎要求</div></div>
+  <div class="fact-item reveal"><div class="fact-n">1分鐘</div><div class="fact-l">忠孝復興站</div></div>
+</div>
+
+<!-- IMMERSIVE SECTION -->
+<div class="immersive">
+  <div class="immersive-bg"></div>
+  <div class="immersive-overlay"></div>
+  <div class="immersive-content reveal">
+    <span class="sec-tag">為什麼選空中瑜伽</span>
+    <h2 style="color:white">吊床是你的<em style="color:var(--gold)">最佳助手</em></h2>
+    <p>地板瑜伽需要你的身體已經有一定柔軟度。空中瑜伽不一樣——吊床負責支撐你，重力負責幫你伸展。</p>
+    <p>你只需要放鬆，讓身體的重量去做它本來就想做的事。這正是為什麼僵硬的人往往在空中瑜伽裡進步最快。</p>
+  </div>
 </div>
 
 <!-- REASONS -->
@@ -242,9 +407,9 @@ footer a:hover { color:var(--terra); }
     <p class="lead">不是「初學者也可以來」，而是「就是為你開的」。</p>
     <div class="cards">
       <div class="card reveal">
-        <div class="card-ico">🌱</div>
-        <h3>從地板開始</h3>
-        <p>不需要站起來做高難度動作。低空療愈瑜伽全程貼近地面，讓身體的重量交給地板，一點一點慢慢打開。</p>
+        <div class="card-ico">🌿</div>
+        <h3>吊床支撐你</h3>
+        <p>不需要靠肌力維持姿勢。吊床承接你全身的重量，讓你在放鬆的狀態下完成原本做不到的伸展。</p>
       </div>
       <div class="card reveal">
         <div class="card-ico">👁️</div>
@@ -254,7 +419,7 @@ footer a:hover { color:var(--terra); }
       <div class="card reveal">
         <div class="card-ico">🕊️</div>
         <h3>不趕、不比、不表演</h3>
-        <p>這裡沒有人看你做不到。彎不到就彎到那裡，做不到就換個做法。你的身體不需要跟任何人一樣。</p>
+        <p>彎不到就彎到那裡，做不到就換個做法。你的身體不需要跟任何人一樣，這裡沒有標準答案。</p>
       </div>
     </div>
   </div>
@@ -262,25 +427,25 @@ footer a:hover { color:var(--terra); }
 
 <!-- VIDEOS -->
 <div class="videos-wrap" id="videos">
+  <div class="videos-bg"></div>
   <div class="videos-inner">
-    <span class="sec-tag" style="color:rgba(255,255,255,0.4)">上課影片</span>
+    <span class="sec-tag">上課影片</span>
     <h2>先看看<em>上課的感覺</em></h2>
     <p class="lead">不確定適不適合你？先看看影片就知道了。</p>
     <div class="vid-grid">
-      <!-- 把下面三個 VIDEO_ID_1/2/3 換成你的 YouTube 影片 ID -->
       <div class="vid-frame reveal">
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_1"
-          title="瑜伽影片1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+          title="空中瑜伽影片1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
           allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="vid-frame reveal">
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_2"
-          title="瑜伽影片2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+          title="空中瑜伽影片2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
           allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="vid-frame reveal">
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_3"
-          title="瑜伽影片3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+          title="空中瑜伽影片3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
           allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
@@ -337,7 +502,7 @@ footer a:hover { color:var(--terra); }
         <div class="info-ico">🧘</div>
         <div>
           <div class="info-label">需要帶什麼</div>
-          <div class="info-val">只需要穿舒適的衣服來<br>瑜伽墊、道具全部提供</div>
+          <div class="info-val">只需要穿舒適的衣服來<br>吊床、道具全部提供</div>
         </div>
       </div>
       <div class="info-item">
@@ -360,31 +525,38 @@ footer a:hover { color:var(--terra); }
 <div class="faq-wrap" id="faq">
   <div class="faq-inner">
     <span class="sec-tag">常見問題</span>
-    <h2>你可能想問的<em>3 個問題</em></h2>
+    <h2>你可能想問的<em>問題</em></h2>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">完全沒練過瑜伽，可以來嗎？</button>
-      <div class="faq-a"><p>當然可以，這門課就是為你設計的。從第一天開始就不假設你有任何基礎，老師會從最基本的開始教，你不需要擔心自己跟不上。身體僵硬反而是最常見的狀況，不是例外。</p></div>
+      <div class="faq-a"><p>當然可以，這門課就是為你設計的。空中瑜伽的吊床會支撐你的身體，比地板瑜伽更適合零基礎的人開始。老師會從最基本的開始教，你不需要擔心自己跟不上。</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">我的身體很僵硬，真的沒問題嗎？</button>
-      <div class="faq-a"><p>沒問題。瑜伽不是彎給人看的，它是讓你慢慢找回身體的感覺。你彎不到的地方，老師會幫你找到一個你做得到的版本。每個人的身體都不一樣，這裡沒有「標準答案」。</p></div>
+      <div class="faq-a"><p>沒問題，而且身體僵硬的人往往在空中瑜伽進步最快。吊床讓重力幫你伸展，你不需要靠肌力去「撐」一個姿勢。彎不到的地方，老師會幫你找到你做得到的版本。</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">我怕高，可以嗎？</button>
+      <div class="faq-a"><p>吊床距離地面大約 50–80 公分，不是真的懸在高空。大多數說自己怕高的學生，第一堂下來都很驚訝——根本不覺得高，反而覺得很安全、很放鬆。</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">怎麼預約？要先買課嗎？</button>
-      <div class="faq-a"><p>直接傳訊息給我就好，不需要先付費或先買課程。我們確認時間後再說。第一堂體驗課現場付 NT$399，你也可以用 LINE Pay 或轉帳。</p></div>
+      <div class="faq-a"><p>直接傳訊息給我就好，不需要先付費或先買課程。確認時間後再說。第一堂體驗課現場付 NT$399，也可以用 LINE Pay 或轉帳。</p></div>
     </div>
   </div>
 </div>
 
 <!-- CONTACT -->
 <div class="contact-wrap" id="contact">
-  <h2 style="font-family:var(--serif);font-weight:400">直接傳訊息給我</h2>
-  <p>不用填表，傳個訊息說「想預約體驗課」就好。<br>我通常在 24 小時內回覆。</p>
-  <div class="contact-btns">
-    <a href="https://line.me/ti/p/YOUR_LINE_ID" target="_blank" class="contact-btn btn-line">LINE 傳訊息</a>
-    <a href="https://instagram.com/jadewenyoga" target="_blank" class="contact-btn btn-ig">Instagram DM</a>
-    <a href="mailto:YOUR_EMAIL@gmail.com" class="contact-btn btn-email">寄電子郵件</a>
+  <div class="contact-bg"></div>
+  <div class="contact-content">
+    <h2>直接傳訊息給我</h2>
+    <p>不用填表，傳個訊息說「想預約體驗課」就好。<br>我通常在 24 小時內回覆。</p>
+    <div class="contact-btns">
+      <a href="https://line.me/ti/p/YOUR_LINE_ID" target="_blank" class="contact-btn btn-line">LINE 傳訊息</a>
+      <a href="https://instagram.com/jadewenyoga" target="_blank" class="contact-btn btn-ig">Instagram DM</a>
+      <a href="mailto:YOUR_EMAIL@gmail.com" class="contact-btn btn-email">寄電子郵件</a>
+    </div>
   </div>
 </div>
 
@@ -397,6 +569,12 @@ footer a:hover { color:var(--terra); }
 </footer>
 
 <script>
+// Sticky nav style
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
 // FAQ toggle
 function toggleFaq(btn) {
   const item = btn.closest('.faq-item');
@@ -414,7 +592,7 @@ function toggleFaq(btn) {
 // Scroll reveal
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 </body>
