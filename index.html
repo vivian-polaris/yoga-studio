@@ -203,6 +203,28 @@
   }
   .tag-text { font-size:0.88rem; color:var(--mid); line-height:1.6; }
 
+  /* AMENITIES */
+  .amenities {
+    background:var(--cream);
+    padding:3.5rem 4rem;
+    display:flex; gap:3rem; flex-wrap:wrap; align-items:flex-start;
+  }
+  .amenities-title {
+    font-size:0.66rem; letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--sage); white-space:nowrap; padding-top:0.15rem;
+  }
+  .amenities-list {
+    display:flex; gap:2.5rem; flex-wrap:wrap; flex:1;
+  }
+  .am {
+    display:flex; flex-direction:column; gap:0.3rem;
+  }
+  .am-icon { font-size:1.2rem; }
+  .am-label { font-size:0.82rem; color:var(--mid); line-height:1.5; }
+  @media(max-width:768px) {
+    .amenities { padding:2.5rem 1.5rem; flex-direction:column; gap:1.5rem; }
+  }
+
   /* BOOKING */
   #booking { background:var(--terracotta); }
   #booking h2 { color:white; }
@@ -375,6 +397,16 @@
     </div>
   </div>
 </section>
+
+<div class="amenities">
+  <div class="amenities-title">教室設施</div>
+  <div class="amenities-list">
+    <div class="am"><div class="am-icon">🚿</div><div class="am-label">淋浴間<br>毛巾供應</div></div>
+    <div class="am"><div class="am-icon">💧</div><div class="am-label">飲用水<br>隨時取用</div></div>
+    <div class="am"><div class="am-icon">🧘</div><div class="am-label">專業厚地板<br>全程保護關節</div></div>
+    <div class="am"><div class="am-icon">🕯</div><div class="am-label">溫暖燈光<br>讓你放鬆下來</div></div>
+  </div>
+</div>
 
 <div class="divider" style="background:rgba(255,255,255,0.06); margin:0 4rem;"></div>
 
