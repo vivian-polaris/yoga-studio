@@ -21,7 +21,7 @@
 
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { font-family:var(--sans); background:var(--warm); color:var(--deep); overflow-x:hidden; }
+body { font-family:var(--sans); background:var(--warm); color:var(--deep); overflow-x:hidden; overflow-wrap:break-word; }
 
 /* ── ANNOUNCEMENT TICKER ── */
 .ticker-bar {
@@ -125,8 +125,8 @@ nav.scrolled {
   padding:0.35rem 1.2rem; border:1px solid rgba(200,169,110,0.4); border-radius:20px;
 }
 .hero h1 {
-  font-family:var(--serif); font-size:clamp(2.8rem,6vw,5rem);
-  font-weight:400; line-height:1.15; color:white; margin-bottom:1.2rem;
+  font-family:var(--serif); font-size:clamp(1.9rem,8vw,5rem);
+  font-weight:400; line-height:1.2; color:white; margin-bottom:1.2rem;
   text-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 .hero h1 em { color:var(--gold); font-style:italic; }
@@ -413,7 +413,6 @@ footer a:hover { color:var(--gold); }
   .immersive-content { padding:5rem 1.5rem; max-width:100%; }
 }
 @media(max-width:480px) {
-  .hero h1 { font-size:2.4rem; }
   .fact-n { font-size:2rem; }
 }
 
@@ -475,7 +474,7 @@ footer a:hover { color:var(--gold); }
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="sutra-tag">prayatna-śaithilya-ananta-samāpattibhyām</div>
-    <h1>放鬆每一分用力，<br><em>讓心融入無限</em></h1>
+    <h1>放鬆每一分用力，<em>讓心融入無限</em></h1>
     <p class="hero-sub">當你放鬆穩定，就不容易被外界消耗</p>
     <div class="hero-citation">
       <p>透過放鬆一切過度的用力，並使心融入於無限之中，體位與身心便達到輕鬆安穩的狀態。</p>
@@ -626,7 +625,7 @@ footer a:hover { color:var(--gold); }
   </div>
   <div class="try-box reveal">
     <h3>第一堂只要 NT$499</h3>
-    <p>來試一次，感受看看適不適合你。<br>不喜歡完全沒關係，沒有任何壓力。</p>
+    <p>來試一次，感受看看適不適合你。不喜歡完全沒關係，沒有任何壓力。</p>
     <a href="#booking" class="try-btn">預約體驗課</a>
   </div>
 </section>
@@ -661,7 +660,7 @@ footer a:hover { color:var(--gold); }
   <div class="contact-bg"></div>
   <div class="contact-content">
     <h2>直接傳訊息給我</h2>
-    <p>傳個訊息說「想預約體驗課」就好。<br>我通常在 24 小時內回覆。</p>
+    <p>傳個訊息說「想預約體驗課」就好。我通常在 24 小時內回覆。</p>
     <div class="contact-btns">
       <a href="https://line.me/ti/p/airbnbsnow" target="_blank" class="contact-btn btn-line">LINE 傳訊息</a>
       <a href="mailto:jadewenyoga@gmail.com" class="contact-btn btn-email">寄電子郵件</a>
@@ -673,7 +672,7 @@ footer a:hover { color:var(--gold); }
 <div class="booking-section" id="booking">
   <div class="booking-inner">
     <h2>預約體驗課</h2>
-    <p class="booking-sub">填寫以下表單，告訴我你方便的時間。<br>我會在 24 小時內寄信確認。</p>
+    <p class="booking-sub">填寫以下表單，告訴我你方便的時間。我會在 24 小時內寄信確認。</p>
 
     <!-- Netlify hidden form for detection -->
     <form name="booking" netlify netlify-honeypot="bot-field" hidden>
