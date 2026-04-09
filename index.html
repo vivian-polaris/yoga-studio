@@ -292,6 +292,71 @@ h2 em { color:var(--terra); font-style:italic; }
 .btn-email { border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.6); background:transparent; }
 .btn-email:hover { border-color:var(--gold); color:var(--gold); }
 
+/* ── BOOKING FORM ── */
+.booking-section {
+  background:var(--deep); padding:6rem 2rem;
+}
+.booking-inner {
+  max-width:640px; margin:0 auto;
+}
+.booking-inner h2 {
+  font-family:var(--serif); font-weight:400; color:var(--gold);
+  font-size:2rem; margin-bottom:0.5rem; text-align:center;
+}
+.booking-inner .booking-sub {
+  color:rgba(255,255,255,0.45); font-size:0.9rem; text-align:center;
+  margin-bottom:2.8rem; line-height:1.8;
+}
+.booking-form { display:flex; flex-direction:column; gap:1.2rem; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; }
+.form-group { display:flex; flex-direction:column; gap:0.4rem; }
+.form-group label {
+  font-size:0.75rem; letter-spacing:0.1em; color:rgba(255,255,255,0.45);
+  text-transform:uppercase;
+}
+.form-group input,
+.form-group textarea {
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(200,169,110,0.2);
+  border-radius:2px; padding:0.85rem 1rem;
+  color:white; font-size:0.9rem; font-family:var(--sans);
+  transition:border-color 0.3s;
+  outline:none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color:rgba(255,255,255,0.2); }
+.form-group input:focus,
+.form-group textarea:focus { border-color:var(--gold); }
+.form-group textarea { resize:vertical; min-height:90px; }
+.time-label {
+  font-size:0.75rem; letter-spacing:0.1em; color:rgba(255,255,255,0.45);
+  text-transform:uppercase; margin-bottom:0.4rem;
+}
+.time-options { display:flex; flex-direction:column; gap:0.6rem; }
+.time-option {
+  display:flex; align-items:center; gap:0.75rem; cursor:pointer;
+}
+.time-option input[type="checkbox"] {
+  width:16px; height:16px; cursor:pointer; accent-color:var(--gold);
+  flex-shrink:0;
+}
+.time-option span {
+  font-size:0.88rem; color:rgba(255,255,255,0.6);
+}
+.form-submit {
+  margin-top:0.6rem;
+  background:transparent; border:1px solid var(--gold);
+  color:var(--gold); padding:1rem 2.5rem;
+  font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase;
+  cursor:pointer; border-radius:2px; transition:all 0.3s;
+  font-family:var(--sans);
+}
+.form-submit:hover { background:var(--gold); color:var(--deep); }
+.form-success {
+  display:none; text-align:center; padding:2rem;
+  color:var(--gold); font-size:1.1rem;
+}
+
 /* ── FOOTER ── */
 footer {
   background:var(--deep); border-top:1px solid rgba(255,255,255,0.05);
@@ -355,7 +420,7 @@ footer a:hover { color:var(--gold); }
     <a href="#class">課程</a>
     <a href="#videos">影片</a>
     <a href="#faq">FAQ</a>
-    <a href="#contact" class="nav-cta">預約體驗</a>
+    <a href="#booking" class="nav-cta">預約體驗</a>
   </div>
 </nav>
 
@@ -372,7 +437,7 @@ footer a:hover { color:var(--gold); }
       <cite>《瑜伽經》Sādhana Pāda · 2.47 &nbsp;·&nbsp; 台北 · 空中瑜伽 · 小班制</cite>
     </div>
     <div class="hero-btns">
-      <a href="#contact" class="btn-fill">預約體驗課 NT$499</a>
+      <a href="#booking" class="btn-fill">預約體驗課 NT$499</a>
       <a href="#videos" class="btn-ghost">先看看上課影片</a>
     </div>
   </div>
@@ -517,7 +582,7 @@ footer a:hover { color:var(--gold); }
   <div class="try-box reveal">
     <h3>第一堂只要 NT$499</h3>
     <p>來試一次，感受看看適不適合你。<br>不喜歡完全沒關係，沒有任何壓力。</p>
-    <a href="#contact" class="try-btn">預約體驗課</a>
+    <a href="#booking" class="try-btn">預約體驗課</a>
   </div>
 </section>
 
@@ -551,11 +616,80 @@ footer a:hover { color:var(--gold); }
   <div class="contact-bg"></div>
   <div class="contact-content">
     <h2>直接傳訊息給我</h2>
-    <p>不用填表，傳個訊息說「想預約體驗課」就好。<br>我通常在 24 小時內回覆。</p>
+    <p>傳個訊息說「想預約體驗課」就好。<br>我通常在 24 小時內回覆。</p>
     <div class="contact-btns">
       <a href="https://line.me/ti/p/YOUR_LINE_ID" target="_blank" class="contact-btn btn-line">LINE 傳訊息</a>
       <a href="https://instagram.com/jadewenyoga" target="_blank" class="contact-btn btn-ig">Instagram DM</a>
-      <a href="mailto:YOUR_EMAIL@gmail.com" class="contact-btn btn-email">寄電子郵件</a>
+      <a href="mailto:jadewenyoga@gmail.com" class="contact-btn btn-email">寄電子郵件</a>
+    </div>
+  </div>
+</div>
+
+<!-- BOOKING FORM -->
+<div class="booking-section" id="booking">
+  <div class="booking-inner">
+    <h2>預約體驗課</h2>
+    <p class="booking-sub">填寫以下表單，告訴我你方便的時間。<br>我會在 24 小時內寄信確認。</p>
+
+    <!-- Netlify hidden form for detection -->
+    <form name="booking" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name">
+      <input type="tel" name="phone">
+      <input type="email" name="email">
+      <input type="checkbox" name="time[]" value="週一至五 午間12:10">
+      <input type="checkbox" name="time[]" value="週六 下午15:00">
+      <input type="checkbox" name="time[]" value="彈性時間（請在備註說明）">
+      <textarea name="note"></textarea>
+    </form>
+
+    <form class="booking-form" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleBookingSubmit(event)">
+      <input type="hidden" name="form-name" value="booking">
+      <input type="hidden" name="bot-field" style="display:none">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">姓名</label>
+          <input type="text" id="name" name="name" placeholder="你的名字" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">電話 / Line ID</label>
+          <input type="text" id="phone" name="phone" placeholder="方便聯繫的方式" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="確認信會寄到這裡" required>
+      </div>
+
+      <div>
+        <p class="time-label">偏好上課時間（可複選）</p>
+        <div class="time-options">
+          <label class="time-option">
+            <input type="checkbox" name="time[]" value="週一至五 午間12:10">
+            <span>週一至五 · 午間 12:10</span>
+          </label>
+          <label class="time-option">
+            <input type="checkbox" name="time[]" value="週六 下午15:00">
+            <span>週六 · 下午 15:00</span>
+          </label>
+          <label class="time-option">
+            <input type="checkbox" name="time[]" value="彈性時間（請在備註說明）">
+            <span>彈性時間（請在備註說明）</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="note">備註</label>
+        <textarea id="note" name="note" placeholder="有什麼想先告訴我的，或想問的問題⋯"></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">送出預約申請</button>
+    </form>
+
+    <div class="form-success" id="bookingSuccess">
+      <p>✦ 已收到你的申請，我會盡快與你確認上課時間。</p>
     </div>
   </div>
 </div>
@@ -594,6 +728,20 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Booking form submission
+async function handleBookingSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  try {
+    await fetch('/', { method: 'POST', body: data });
+    form.style.display = 'none';
+    document.getElementById('bookingSuccess').style.display = 'block';
+  } catch (err) {
+    alert('送出失敗，請稍後再試或直接傳 LINE 給我。');
+  }
+}
 </script>
 
 </body>
