@@ -529,18 +529,8 @@ footer a:hover { color:var(--gold); }
     <h2>報名課程</h2>
     <p class="booking-sub">填寫以下資料，我會在 24 小時內與你確認課程細節。</p>
 
-    <!-- Netlify hidden form for detection -->
-    <form name="hatha-booking" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name">
-      <input type="tel" name="phone">
-      <input type="email" name="email">
-      <input type="text" name="sessions">
-      <textarea name="note"></textarea>
-    </form>
-
-    <form class="booking-form" name="hatha-booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
-      <input type="hidden" name="form-name" value="hatha-booking">
-      <input type="hidden" name="bot-field" style="display:none">
+    <form class="booking-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event)">
+      <input type="hidden" name="access_key" value="981950">
 
       <div class="form-row">
         <div class="form-group">
@@ -597,9 +587,14 @@ async function handleSubmit(e) {
   const form = e.target;
   const data = new FormData(form);
   try {
-    await fetch('/', { method: 'POST', body: data });
-    form.style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+    const json = await res.json();
+    if (json.success) {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    } else {
+      alert('送出失敗，請稍後再試或直接傳 LINE 給我。');
+    }
   } catch (err) {
     alert('送出失敗，請稍後再試或直接傳 LINE 給我。');
   }

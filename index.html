@@ -666,7 +666,7 @@ footer a:hover { color:var(--gold); }
     <h2>直接傳訊息給我</h2>
     <p>傳個訊息說「想預約體驗課」就好。我通常在 24 小時內回覆。</p>
     <div class="contact-btns">
-      <a href="https://line.me/ti/p/~airbnbsnow" target="_blank" class="contact-btn btn-line">LINE 傳訊息</a>
+      <a href="https://line.me/ti/p/airbnbsnow" target="_blank" class="contact-btn btn-line">LINE 傳訊息</a>
       <a href="mailto:jadewenyoga@gmail.com" class="contact-btn btn-email">寄電子郵件</a>
     </div>
   </div>
@@ -678,20 +678,8 @@ footer a:hover { color:var(--gold); }
     <h2>預約體驗課</h2>
     <p class="booking-sub">填寫以下表單，告訴我你方便的時間。我會在 24 小時內寄信確認。</p>
 
-    <!-- Netlify hidden form for detection -->
-    <form name="booking" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name">
-      <input type="tel" name="phone">
-      <input type="email" name="email">
-      <input type="checkbox" name="time[]" value="週一至五 午間12:10">
-      <input type="checkbox" name="time[]" value="週六 下午15:00">
-      <input type="checkbox" name="time[]" value="彈性時間（請在備註說明）">
-      <textarea name="note"></textarea>
-    </form>
-
-    <form class="booking-form" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleBookingSubmit(event)">
-      <input type="hidden" name="form-name" value="booking">
-      <input type="hidden" name="bot-field" style="display:none">
+    <form class="booking-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleBookingSubmit(event)">
+      <input type="hidden" name="access_key" value="981950">
 
       <div class="form-row">
         <div class="form-group">
@@ -781,14 +769,14 @@ async function handleBookingSubmit(e) {
   const form = e.target;
   const data = new FormData(form);
   try {
-    const res = await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(data).toString()
-    });
-    if (!res.ok) throw new Error('failed');
-    form.style.display = 'none';
-    document.getElementById('bookingSuccess').style.display = 'block';
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+    const json = await res.json();
+    if (json.success) {
+      form.style.display = 'none';
+      document.getElementById('bookingSuccess').style.display = 'block';
+    } else {
+      alert('送出失敗，請稍後再試或直接傳 LINE 給我。');
+    }
   } catch (err) {
     alert('送出失敗，請稍後再試或直接傳 LINE 給我。');
   }
