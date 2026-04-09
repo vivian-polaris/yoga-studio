@@ -23,6 +23,41 @@
 html { scroll-behavior:smooth; }
 body { font-family:var(--sans); background:var(--warm); color:var(--deep); overflow-x:hidden; }
 
+/* ── ANNOUNCEMENT TICKER ── */
+.ticker-bar {
+  background: linear-gradient(90deg, #1A1410 0%, #2a1f14 50%, #1A1410 100%);
+  border-bottom: 1px solid rgba(200,169,110,0.25);
+  overflow: hidden; white-space: nowrap;
+  position: relative; z-index: 200;
+  padding: 0.55rem 0;
+}
+.ticker-bar a {
+  text-decoration: none; display: block;
+}
+.ticker-track {
+  display: inline-flex; gap: 0;
+  animation: ticker-scroll 28s linear infinite;
+}
+.ticker-bar:hover .ticker-track { animation-play-state: paused; }
+.ticker-item {
+  display: inline-flex; align-items: center; gap: 0.8rem;
+  padding: 0 3rem;
+  font-size: 0.75rem; letter-spacing: 0.12em; color: rgba(200,169,110,0.9);
+  white-space: nowrap;
+}
+.ticker-item .ticker-dot { color: var(--terra); font-size: 1rem; }
+.ticker-item strong { color: var(--gold); }
+.ticker-item .ticker-cta {
+  background: var(--gold); color: var(--deep);
+  padding: 0.18rem 0.7rem; border-radius: 2px;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+  margin-left: 0.4rem;
+}
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ── NAV ── */
 nav {
   position:fixed; top:0; left:0; right:0; z-index:100;
@@ -412,6 +447,18 @@ footer a:hover { color:var(--gold); }
 </style>
 </head>
 <body>
+
+<!-- ANNOUNCEMENT TICKER -->
+<div class="ticker-bar">
+  <a href="hatha.html" target="_blank">
+    <div class="ticker-track">
+      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
+    </div>
+  </a>
+</div>
 
 <!-- NAV -->
 <nav id="nav">

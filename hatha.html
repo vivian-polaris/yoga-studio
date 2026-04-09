@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>哈達瑜伽拜日式 · 特別課程 · Jadewen Yoga</title>
+<meta name="description" content="六週把哈達瑜伽拜日式背起來，隨時飆瑜伽。2026/4/22–5/29，台北東區小班制，每堂NT$800。">
+
+<style>
+:root {
+  --cream:  #F5F0E8;
+  --warm:   #FDFAF4;
+  --terra:  #C4785A;
+  --sage:   #7A8C72;
+  --deep:   #1A1410;
+  --mid:    #5C4A32;
+  --gold:   #C8A96E;
+  --serif:  'Georgia', 'Times New Roman', serif;
+  --sans:   -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:var(--sans); background:var(--warm); color:var(--deep); overflow-x:hidden; }
+
+/* ── NAV ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  padding:1.2rem 3rem; display:flex; align-items:center; justify-content:space-between;
+  transition: background 0.4s, padding 0.4s;
+}
+nav.scrolled {
+  background:rgba(26,20,16,0.92); backdrop-filter:blur(12px);
+  padding:0.8rem 3rem;
+  border-bottom:1px solid rgba(200,169,110,0.12);
+}
+.logo {
+  font-family:var(--serif); font-size:1.3rem; color:white; text-decoration:none;
+  letter-spacing:0.04em;
+}
+.logo span { color:var(--gold); font-style:italic; }
+.nav-back {
+  color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.78rem;
+  letter-spacing:0.1em; text-transform:uppercase; transition:color 0.3s;
+  display:flex; align-items:center; gap:0.5rem;
+}
+.nav-back:hover { color:var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  position:relative; min-height:100vh;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; overflow:hidden;
+}
+.hero-bg {
+  position:absolute; inset:0; z-index:0;
+  background-image: url('https://images.unsplash.com/photo-1553871892-5970e9ccf079?auto=format&fit=crop&w=1920&q=85');
+  background-size:cover; background-position:center 40%;
+  transform:scale(1.05);
+  animation: slowzoom 20s ease-in-out infinite alternate;
+}
+@keyframes slowzoom {
+  from { transform:scale(1.05) translateY(0); }
+  to   { transform:scale(1.12) translateY(-2%); }
+}
+.hero-overlay {
+  position:absolute; inset:0; z-index:1;
+  background: linear-gradient(
+    to bottom,
+    rgba(26,20,16,0.3) 0%,
+    rgba(26,20,16,0.55) 50%,
+    rgba(26,20,16,0.85) 100%
+  );
+}
+.hero-content {
+  position:relative; z-index:2;
+  padding:2rem;
+  max-width:780px;
+}
+.hero-badge {
+  display:inline-flex; align-items:center; gap:0.6rem;
+  font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:2rem;
+  padding:0.35rem 1.4rem; border:1px solid rgba(200,169,110,0.4); border-radius:20px;
+}
+.hero-badge .badge-dot { width:5px; height:5px; background:var(--terra); border-radius:50%; display:inline-block; }
+.hero h1 {
+  font-family:var(--serif); font-size:clamp(2.8rem,6vw,5rem);
+  font-weight:400; line-height:1.15; color:white; margin-bottom:0.8rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+.hero h1 em { color:var(--gold); font-style:italic; }
+.hero-en {
+  font-size:0.8rem; letter-spacing:0.28em; text-transform:uppercase;
+  color:rgba(255,255,255,0.4); margin-bottom:1.4rem;
+}
+.hero-dates {
+  display:inline-flex; align-items:center; gap:0.8rem;
+  font-size:1rem; color:rgba(255,255,255,0.75);
+  margin-bottom:2.8rem; letter-spacing:0.06em;
+}
+.hero-dates .sep { color:var(--gold); }
+.hero-btns { display:flex; gap:1.2rem; justify-content:center; flex-wrap:wrap; }
+.btn-fill {
+  background:var(--gold); color:var(--deep); padding:1rem 2.4rem;
+  text-decoration:none; font-size:0.82rem; letter-spacing:0.1em;
+  border-radius:1px; transition:all 0.3s; font-weight:600;
+}
+.btn-fill:hover { background:white; }
+.btn-ghost {
+  border:1px solid rgba(255,255,255,0.4); color:white; padding:1rem 2.2rem;
+  text-decoration:none; font-size:0.82rem; letter-spacing:0.1em;
+  border-radius:1px; transition:all 0.3s; background:transparent;
+}
+.btn-ghost:hover { border-color:var(--gold); color:var(--gold); }
+
+/* Scroll hint */
+.scroll-hint {
+  position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%);
+  z-index:2; display:flex; flex-direction:column; align-items:center; gap:0.5rem;
+  color:rgba(255,255,255,0.4); font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
+  animation: bounce 2s ease-in-out infinite;
+}
+.scroll-hint::after {
+  content:''; display:block; width:1px; height:40px;
+  background:linear-gradient(to bottom, rgba(200,169,110,0.6), transparent);
+}
+@keyframes bounce {
+  0%,100% { transform:translateX(-50%) translateY(0); }
+  50%      { transform:translateX(-50%) translateY(6px); }
+}
+
+/* ── QUICK STATS ── */
+.stats {
+  background:var(--deep); display:grid;
+  grid-template-columns:repeat(4,1fr); text-align:center;
+  padding:3rem 2rem; gap:0;
+}
+.stat-item {
+  padding:1.5rem 1rem; border-right:1px solid rgba(255,255,255,0.06);
+}
+.stat-item:last-child { border-right:none; }
+.stat-n { font-family:var(--serif); font-size:2.6rem; color:var(--gold); line-height:1; }
+.stat-l { font-size:0.64rem; letter-spacing:0.16em; color:rgba(255,255,255,0.35); text-transform:uppercase; margin-top:0.5rem; }
+
+/* ── SECTIONS ── */
+section { padding:6rem 2rem; max-width:880px; margin:0 auto; }
+.sec-tag {
+  font-size:0.65rem; letter-spacing:0.25em; text-transform:uppercase;
+  color:var(--sage); margin-bottom:1rem; display:block;
+}
+h2 { font-family:var(--serif); font-size:clamp(1.9rem,4vw,3rem); font-weight:400; line-height:1.2; margin-bottom:1.2rem; }
+h2 em { color:var(--terra); font-style:italic; }
+.lead { font-size:0.95rem; line-height:2; color:var(--mid); margin-bottom:3rem; }
+
+/* ── WHAT YOU LEARN ── */
+.learn-wrap { background:var(--cream); padding:6rem 2rem; }
+.learn-inner { max-width:880px; margin:0 auto; }
+.pose-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1.8rem; margin-top:2.5rem;
+}
+.pose-card {
+  background:white; padding:2rem 1.8rem;
+  border-top:2px solid var(--gold); border-radius:2px;
+  box-shadow:0 4px 30px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.pose-card:hover { transform:translateY(-4px); box-shadow:0 8px 40px rgba(0,0,0,0.1); }
+.pose-num {
+  font-family:var(--serif); font-size:2rem; color:var(--gold);
+  opacity:0.5; line-height:1; margin-bottom:0.8rem;
+}
+.pose-card h3 { font-family:var(--serif); font-size:1.05rem; color:var(--deep); margin-bottom:0.5rem; }
+.pose-card p { font-size:0.84rem; line-height:1.9; color:var(--mid); }
+.pose-card .pose-en { font-size:0.7rem; letter-spacing:0.1em; color:var(--sage); text-transform:uppercase; margin-bottom:0.4rem; display:block; }
+
+/* ── IMMERSIVE QUOTE ── */
+.immersive {
+  position:relative; min-height:60vh;
+  display:flex; align-items:center; overflow:hidden;
+}
+.immersive-bg {
+  position:absolute; inset:0;
+  background-image: url('https://images.unsplash.com/photo-1553871892-5970e9ccf079?auto=format&fit=crop&w=1920&q=85');
+  background-size:cover; background-position:center 60%;
+  background-attachment:fixed;
+}
+.immersive-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to right, rgba(26,20,16,0.93) 45%, rgba(26,20,16,0.35) 100%);
+}
+.immersive-content {
+  position:relative; z-index:2;
+  padding:5rem 3rem 5rem 8%;
+  max-width:600px;
+}
+.immersive-content .sec-tag { color:var(--gold); opacity:0.7; }
+.immersive-content h2 { color:white; margin-bottom:1.2rem; }
+.immersive-content p {
+  color:rgba(255,255,255,0.65); font-size:0.95rem; line-height:2;
+  margin-bottom:1rem;
+}
+
+/* ── SCHEDULE ── */
+.schedule-wrap { background:var(--deep); padding:6rem 2rem; }
+.schedule-inner { max-width:880px; margin:0 auto; }
+.schedule-inner h2 { color:white; }
+.schedule-inner .sec-tag { color:rgba(200,169,110,0.6); }
+.schedule-inner .lead { color:rgba(255,255,255,0.45); }
+.schedule-grid {
+  display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; margin-top:2.5rem;
+}
+.sched-item {
+  background:rgba(255,255,255,0.04); border:1px solid rgba(200,169,110,0.12);
+  border-radius:2px; padding:1.8rem 2rem;
+  transition:border-color 0.3s;
+}
+.sched-item:hover { border-color:rgba(200,169,110,0.35); }
+.sched-week {
+  font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--terra); margin-bottom:0.5rem;
+}
+.sched-title { font-family:var(--serif); font-size:1.1rem; color:white; margin-bottom:0.4rem; }
+.sched-desc { font-size:0.83rem; color:rgba(255,255,255,0.45); line-height:1.8; }
+
+/* ── PRICE BOX ── */
+.price-wrap { padding:6rem 2rem; max-width:880px; margin:0 auto; }
+.price-box {
+  background:linear-gradient(135deg, var(--terra) 0%, #a05a3e 100%);
+  color:white; padding:4rem 3rem;
+  border-radius:3px; text-align:center;
+  box-shadow:0 8px 60px rgba(196,120,90,0.3);
+}
+.price-box .price-tag {
+  font-size:0.65rem; letter-spacing:0.25em; text-transform:uppercase;
+  color:rgba(255,255,255,0.6); margin-bottom:1.5rem; display:block;
+}
+.price-box h2 {
+  font-family:var(--serif); font-size:clamp(2rem,4vw,3rem);
+  font-weight:400; margin-bottom:0.5rem; color:white;
+}
+.price-num {
+  font-family:var(--serif); font-size:4rem; color:white;
+  line-height:1; margin:1rem 0;
+}
+.price-num sup { font-size:1.4rem; vertical-align:top; margin-top:0.8rem; display:inline-block; }
+.price-num .per { font-size:1rem; opacity:0.7; }
+.price-box p { font-size:0.9rem; opacity:0.82; margin-bottom:2rem; line-height:1.9; max-width:480px; margin-left:auto; margin-right:auto; }
+.price-detail {
+  display:flex; justify-content:center; gap:2.5rem; flex-wrap:wrap;
+  margin-bottom:2.5rem; font-size:0.8rem; opacity:0.75;
+}
+.price-detail span { display:flex; align-items:center; gap:0.4rem; }
+.price-cta {
+  display:inline-block; background:white; color:var(--terra);
+  padding:1rem 3rem; text-decoration:none;
+  font-size:0.85rem; font-weight:700; letter-spacing:0.1em;
+  border-radius:1px; transition:all 0.3s;
+}
+.price-cta:hover { background:var(--deep); color:white; }
+
+/* ── BOOKING FORM ── */
+.booking-section {
+  background:var(--deep); padding:6rem 2rem;
+  border-top:1px solid rgba(200,169,110,0.1);
+}
+.booking-inner {
+  max-width:640px; margin:0 auto;
+}
+.booking-inner h2 {
+  font-family:var(--serif); font-weight:400; color:var(--gold);
+  font-size:2rem; margin-bottom:0.5rem; text-align:center;
+}
+.booking-inner .booking-sub {
+  color:rgba(255,255,255,0.45); font-size:0.9rem; text-align:center;
+  margin-bottom:2.8rem; line-height:1.8;
+}
+.booking-form { display:flex; flex-direction:column; gap:1.2rem; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; }
+.form-group { display:flex; flex-direction:column; gap:0.4rem; }
+.form-group label {
+  font-size:0.75rem; letter-spacing:0.1em; color:rgba(255,255,255,0.45);
+  text-transform:uppercase;
+}
+.form-group input,
+.form-group textarea {
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(200,169,110,0.2);
+  border-radius:2px; padding:0.85rem 1rem;
+  color:white; font-size:0.9rem; font-family:var(--sans);
+  transition:border-color 0.3s; outline:none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color:rgba(255,255,255,0.2); }
+.form-group input:focus,
+.form-group textarea:focus { border-color:var(--gold); }
+.form-group textarea { resize:vertical; min-height:90px; }
+.form-submit {
+  margin-top:0.6rem;
+  background:transparent; border:1px solid var(--gold);
+  color:var(--gold); padding:1rem 2.5rem;
+  font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase;
+  cursor:pointer; border-radius:2px; transition:all 0.3s;
+  font-family:var(--sans);
+}
+.form-submit:hover { background:var(--gold); color:var(--deep); }
+.form-success {
+  display:none; text-align:center; padding:2rem;
+  color:var(--gold); font-size:1.1rem;
+}
+
+/* ── FOOTER ── */
+footer {
+  background:var(--deep); border-top:1px solid rgba(255,255,255,0.05);
+  padding:2.5rem; text-align:center;
+  font-size:0.75rem; color:rgba(255,255,255,0.2);
+}
+footer a { color:rgba(255,255,255,0.35); text-decoration:none; transition:color 0.3s; }
+footer a:hover { color:var(--gold); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px) {
+  .stats { grid-template-columns:repeat(2,1fr); }
+  .pose-grid { grid-template-columns:1fr; }
+  .schedule-grid { grid-template-columns:1fr; }
+  nav { padding:1rem 1.5rem; }
+  nav.scrolled { padding:0.7rem 1.5rem; }
+  .immersive-bg { background-attachment:scroll; }
+  .immersive-content { padding:5rem 1.5rem; max-width:100%; }
+}
+@media(max-width:480px) {
+  .hero h1 { font-size:2.4rem; }
+  .form-row { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="logo">Jadewen <span>Yoga</span></a>
+  <a href="index.html" class="nav-back">← 回主頁</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      特別課程 · 限額 5 人
+      <span class="badge-dot"></span>
+    </div>
+    <p class="hero-en">Hatha Yoga · Surya Namaskar</p>
+    <h1>哈達瑜伽<br><em>拜日式</em></h1>
+    <div class="hero-dates">
+      <span>2026 / 4.22</span>
+      <span class="sep">——</span>
+      <span>5.29</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#booking" class="btn-fill">立即預約 NT$800 / 堂</a>
+      <a href="#schedule" class="btn-ghost">查看課程安排</a>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-n">6</div>
+    <div class="stat-l">週次課程</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-n">12</div>
+    <div class="stat-l">拜日式動作</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-n">5</div>
+    <div class="stat-l">人小班制</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-n">800</div>
+    <div class="stat-l">NT$ 每堂</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+  <span class="sec-tag">關於這堂課</span>
+  <h2>把拜日式<br><em>刻進身體記憶</em></h2>
+  <p class="lead">
+    哈達瑜伽的拜日式（Surya Namaskar）是最完整的全身序列，十二個動作串聯呼吸與移動，
+    讓你無論在家、旅途、早晨醒來，隨時都能展開一段屬於自己的練習。<br><br>
+    六週課程，每週一堂，從認識每個體位的力學原理，到順暢銜接動作，最終背起完整序列。
+    我們不趕進度——身體記憶需要時間，所以每堂課都會重複、累積、深化。
+  </p>
+</section>
+
+<!-- WHAT YOU LEARN -->
+<div class="learn-wrap">
+  <div class="learn-inner">
+    <span class="sec-tag">你會學到什麼</span>
+    <h2>十二個動作，<br><em>一個完整序列</em></h2>
+    <div class="pose-grid">
+      <div class="pose-card">
+        <div class="pose-num">01</div>
+        <span class="pose-en">Pranamasana</span>
+        <h3>祈禱式</h3>
+        <p>站立山式，雙掌合十胸前，調整呼吸，進入練習狀態。</p>
+      </div>
+      <div class="pose-card">
+        <div class="pose-num">02</div>
+        <span class="pose-en">Hasta Uttanasana</span>
+        <h3>展臂式</h3>
+        <p>吸氣，雙臂上舉後彎，打開胸口，延伸脊椎。</p>
+      </div>
+      <div class="pose-card">
+        <div class="pose-num">03</div>
+        <span class="pose-en">Hasta Padasana</span>
+        <h3>手碰腳式</h3>
+        <p>吐氣前彎，放鬆背部，啟動腿後側伸展。</p>
+      </div>
+      <div class="pose-card">
+        <div class="pose-num">04</div>
+        <span class="pose-en">Ashwa Sanchalanasana</span>
+        <h3>騎馬式</h3>
+        <p>右腳向後大步，髖部下沉，開展髖屈肌。</p>
+      </div>
+      <div class="pose-card">
+        <div class="pose-num">05–06</div>
+        <span class="pose-en">Dandasana · Ashtanga</span>
+        <h3>棒式 → 八體投地</h3>
+        <p>核心啟動，身體成一直線，再下降膝胸額觸地。</p>
+      </div>
+      <div class="pose-card">
+        <div class="pose-num">07–12</div>
+        <span class="pose-en">Bhujangasana → Pranamasana</span>
+        <h3>眼鏡蛇式 → 歸位</h3>
+        <p>後彎展胸，接下犬式、騎馬、前彎、展臂，最終回到祈禱式。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- IMMERSIVE QUOTE -->
+<div class="immersive">
+  <div class="immersive-bg"></div>
+  <div class="immersive-overlay"></div>
+  <div class="immersive-content">
+    <span class="sec-tag">為什麼要背起來</span>
+    <h2>當動作成為<br><em>直覺</em></h2>
+    <p>
+      不需要看影片，不需要想下一個動作是什麼——當拜日式完全進入你的身體記憶，
+      瑜伽就成了你可以隨時拿出來用的工具。
+    </p>
+    <p>
+      清晨起床五分鐘、旅途中的飯店房間、心情低落的午後——
+      你的墊子，就是你隨時能回來的家。
+    </p>
+  </div>
+</div>
+
+<!-- SCHEDULE -->
+<div class="schedule-wrap" id="schedule">
+  <div class="schedule-inner">
+    <span class="sec-tag">六週課程安排</span>
+    <h2>循序漸進，<em>扎實累積</em></h2>
+    <p class="lead">每週聚焦一個主題，重複練習直到流暢。</p>
+    <div class="schedule-grid">
+      <div class="sched-item">
+        <div class="sched-week">Week 1 · 4/22</div>
+        <div class="sched-title">認識序列骨架</div>
+        <div class="sched-desc">了解十二個動作的名稱與順序，感受整體流動的節奏。</div>
+      </div>
+      <div class="sched-item">
+        <div class="sched-week">Week 2 · 4/29</div>
+        <div class="sched-title">呼吸與動作同步</div>
+        <div class="sched-desc">每個動作配上吸氣或吐氣，讓呼吸引導身體，而不是反過來。</div>
+      </div>
+      <div class="sched-item">
+        <div class="sched-week">Week 3 · 5/6</div>
+        <div class="sched-title">髖部與後彎深化</div>
+        <div class="sched-desc">重點加強騎馬式與眼鏡蛇式，打開最容易緊繃的髖屈肌與胸椎。</div>
+      </div>
+      <div class="sched-item">
+        <div class="sched-week">Week 4 · 5/13</div>
+        <div class="sched-title">左右對稱練習</div>
+        <div class="sched-desc">進入完整左右各一輪的完整序列，建立身體對稱感。</div>
+      </div>
+      <div class="sched-item">
+        <div class="sched-week">Week 5 · 5/20</div>
+        <div class="sched-title">加速流暢度</div>
+        <div class="sched-desc">用更穩定的節奏連續練習，讓序列從「想」進化到「感覺」。</div>
+      </div>
+      <div class="sched-item">
+        <div class="sched-week">Week 6 · 5/29</div>
+        <div class="sched-title">獨立完成 · 收攝</div>
+        <div class="sched-desc">不看提示，完整獨立完成序列。這堂課之後，它就是你的了。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICE -->
+<div class="price-wrap">
+  <div class="price-box">
+    <span class="price-tag">特別課程 · 限額 5 人</span>
+    <h2>哈達瑜伽拜日式</h2>
+    <div class="price-num"><sup>NT$</sup>800<span class="per"> / 堂</span></div>
+    <p>
+      六堂課程，每週一堂，每堂約 75 分鐘。<br>
+      可單堂報名，也可一次報名全程六堂（NT$4,500，省 NT$300）。
+    </p>
+    <div class="price-detail">
+      <span>📅 2026 / 4.22 — 5.29</span>
+      <span>👤 每班最多 5 人</span>
+      <span>📍 台北東區</span>
+    </div>
+    <a href="#booking" class="price-cta">立即報名</a>
+  </div>
+</div>
+
+<!-- BOOKING FORM -->
+<div class="booking-section" id="booking">
+  <div class="booking-inner">
+    <h2>報名課程</h2>
+    <p class="booking-sub">填寫以下資料，我會在 24 小時內與你確認課程細節。</p>
+
+    <!-- Netlify hidden form for detection -->
+    <form name="hatha-booking" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name">
+      <input type="tel" name="phone">
+      <input type="email" name="email">
+      <input type="text" name="sessions">
+      <textarea name="note"></textarea>
+    </form>
+
+    <form class="booking-form" name="hatha-booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+      <input type="hidden" name="form-name" value="hatha-booking">
+      <input type="hidden" name="bot-field" style="display:none">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">姓名</label>
+          <input type="text" id="name" name="name" placeholder="你的名字" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">電話 / Line ID</label>
+          <input type="text" id="phone" name="phone" placeholder="方便聯繫的方式" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="確認信會寄到這裡" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sessions">報名堂數</label>
+        <input type="text" id="sessions" name="sessions" placeholder="單堂 NT$800 / 全程六堂 NT$4,500">
+      </div>
+
+      <div class="form-group">
+        <label for="note">備註</label>
+        <textarea id="note" name="note" placeholder="有任何傷病史、想先詢問的問題，歡迎告訴我⋯"></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">送出報名</button>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      <p>✦ 已收到你的報名，我會盡快與你確認課程細節。</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Jadewen Yoga &nbsp;·&nbsp;
+     <a href="https://www.youtube.com/@jadewenyoga" target="_blank">YouTube</a> &nbsp;·&nbsp;
+     <a href="https://instagram.com/jadewenyoga" target="_blank">Instagram</a> &nbsp;·&nbsp;
+     <a href="index.html">回主頁</a>
+  </p>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+async function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  try {
+    await fetch('/', { method: 'POST', body: data });
+    form.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  } catch (err) {
+    alert('送出失敗，請稍後再試或直接傳 LINE 給我。');
+  }
+}
+</script>
+
+</body>
+</html>
