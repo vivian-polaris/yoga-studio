@@ -741,11 +741,18 @@ footer a:hover { color:var(--gold); }
 </footer>
 
 <script>
-// Sticky nav style
+// Sticky nav style — sits below ticker bar, moves up as ticker scrolls away
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
+const ticker = document.querySelector('.ticker-bar');
+
+function updateNav() {
+  const tickerBottom = Math.max(0, ticker.getBoundingClientRect().bottom);
+  nav.style.top = tickerBottom + 'px';
   nav.classList.toggle('scrolled', window.scrollY > 60);
-});
+}
+
+window.addEventListener('scroll', updateNav);
+updateNav();
 
 // FAQ toggle
 function toggleFaq(btn) {
