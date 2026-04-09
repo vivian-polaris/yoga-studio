@@ -417,8 +417,10 @@ footer a:hover { color:var(--gold); }
   .form-row { grid-template-columns:1fr; }
   .hero h1 { font-size:2rem; }
   .hero h1 em { display:block; }
-  .info-val { word-break:keep-all; }
   h2 { font-size:1.7rem; }
+  p, .lead, .info-val, .faq-a p, .card p, .hero-sub, .immersive-content p {
+    word-break:keep-all; line-break:strict;
+  }
 }
 
 /* ── SUTRA CITATION ── */
