@@ -125,15 +125,12 @@ nav.scrolled {
   padding:0.35rem 1.2rem; border:1px solid rgba(200,169,110,0.4); border-radius:20px;
 }
 .hero h1 {
-  font-family:var(--serif); font-size:clamp(1.9rem,8vw,5rem);
-  font-weight:400; line-height:1.2; color:white; margin-bottom:1.2rem;
+  font-family:var(--serif); font-size:clamp(1.6rem,4.5vw,3.6rem);
+  font-weight:400; line-height:1.4; color:white; margin-bottom:1.4rem;
   text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  font-style:italic; letter-spacing:0.02em;
 }
-.hero h1 em { color:var(--gold); font-style:normal; font-weight:bold; }
-.hero-sub {
-  font-size:1rem; color:rgba(255,255,255,0.7); margin-bottom:1.2rem;
-  letter-spacing:0.08em;
-}
+.hero h1 em { color:var(--gold); font-style:italic; font-weight:400; }
 .hero-desc {
   font-size:0.95rem; line-height:2; color:rgba(255,255,255,0.65);
   max-width:480px; margin:0 auto 3rem;
@@ -401,6 +398,7 @@ footer a:hover { color:var(--gold); }
 
 /* ── RESPONSIVE ── */
 @media(max-width:768px) {
+  .hero h1 { font-size:clamp(1.4rem,6vw,2.6rem); letter-spacing:0.01em; }
   .facts { grid-template-columns:repeat(2,1fr); }
   .cards { grid-template-columns:1fr; }
   .vid-grid { grid-template-columns:1fr; }
@@ -430,9 +428,10 @@ footer a:hover { color:var(--gold); }
 
 /* ── SUTRA CITATION ── */
 .sutra-tag {
-  display:inline-block; font-size:0.7rem; letter-spacing:0.18em;
-  color:rgba(200,169,110,0.55); margin-bottom:1.8rem;
-  font-family:var(--serif); font-style:normal; font-weight:bold;
+  display:inline-block; font-size:0.68rem; letter-spacing:0.24em;
+  color:rgba(200,169,110,0.65); margin-bottom:1.6rem;
+  font-family:var(--sans); font-style:normal; font-weight:400;
+  text-transform:uppercase;
 }
 .hero-citation {
   margin-top:1.8rem; margin-bottom:2.4rem;
@@ -441,8 +440,8 @@ footer a:hover { color:var(--gold); }
   text-align:left; max-width:420px; margin-left:auto; margin-right:auto;
 }
 .hero-citation p {
-  font-size:0.78rem; color:rgba(255,255,255,0.38); line-height:1.7;
-  font-style:normal; font-weight:bold; letter-spacing:0.03em;
+  font-size:0.85rem; color:rgba(255,255,255,0.62); line-height:1.8;
+  font-style:normal; font-weight:400; letter-spacing:0.05em;
 }
 .hero-citation cite {
   display:block; margin-top:0.5rem;
@@ -461,10 +460,10 @@ footer a:hover { color:var(--gold); }
 <div class="ticker-bar">
   <a href="hatha.html" target="_blank">
     <div class="ticker-track">
-      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 108哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 108哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 108哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> <strong>特別課程</strong> 108哈達瑜伽拜日式 &nbsp;·&nbsp; 2026 / 4.22 — 5.29 &nbsp;·&nbsp; 每堂 NT$800 &nbsp;·&nbsp; 小班制 <span class="ticker-cta">了解課程 →</span></span>
     </div>
   </a>
 </div>
@@ -485,11 +484,10 @@ footer a:hover { color:var(--gold); }
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="sutra-tag">prayatna-śaithilya-ananta-samāpattibhyām</div>
-    <h1>放鬆每一分用力<em>讓心融入無限</em></h1>
-    <p class="hero-sub">當你放鬆穩定，就不容易被外界消耗</p>
+        <div class="sutra-tag">Yoga Sūtra &nbsp;·&nbsp; II.47</div>
+    <h1>prayatna-śaithilya<br><em>ananta-samāpattibhyām</em></h1>
     <div class="hero-citation">
-      <p>透過放鬆一切過度的用力，並使心融入於無限之中，體位與身心便達到輕鬆安穩的狀態。</p>
+      <p>放鬆一切用力，讓心融入無限，自然安穩。</p>
       <cite>《瑜伽經》Sādhana Pāda · 2.47 &nbsp;·&nbsp; 台北 · 低空瑜伽 · 小班制</cite>
     </div>
     <div class="hero-btns">
@@ -596,7 +594,7 @@ footer a:hover { color:var(--gold); }
         <div class="info-ico">🕐</div>
         <div>
           <div class="info-label">上課時間</div>
-          <div class="info-val">每天中午 12:10<br>週六下午 15:00</div>
+          <div class="info-val">每天中午 12:15<br>週六上午 9:00</div>
         </div>
       </div>
       <div class="info-item">
@@ -713,12 +711,12 @@ footer a:hover { color:var(--gold); }
         <p class="time-label">偏好上課時間（可複選）</p>
         <div class="time-options">
           <label class="time-option">
-            <input type="checkbox" name="time[]" value="週一至五 午間12:10">
-            <span>週一至五 · 午間 12:10</span>
+            <input type="checkbox" name="time[]" value="週一至五 午間12:15">
+            <span>週一至五 · 午間 12:15</span>
           </label>
           <label class="time-option">
-            <input type="checkbox" name="time[]" value="週六 下午15:00">
-            <span>週六 · 下午 15:00</span>
+            <input type="checkbox" name="time[]" value="週六 上午09:00">
+            <span>週六 · 上午 9:00</span>
           </label>
           <label class="time-option">
             <input type="checkbox" name="time[]" value="彈性時間（請在備註說明）">
