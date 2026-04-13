@@ -125,12 +125,15 @@ nav.scrolled {
   padding:0.35rem 1.2rem; border:1px solid rgba(200,169,110,0.4); border-radius:20px;
 }
 .hero h1 {
-  font-family:var(--serif); font-size:clamp(1.6rem,4.5vw,3.6rem);
-  font-weight:400; line-height:1.4; color:white; margin-bottom:1.4rem;
+  font-family:var(--serif); font-size:clamp(2rem,6vw,4.2rem);
+  font-weight:400; line-height:1.25; color:white; margin-bottom:1rem;
   text-shadow: 0 2px 20px rgba(0,0,0,0.3);
-  font-style:italic; letter-spacing:0.02em;
 }
-.hero h1 em { color:var(--gold); font-style:italic; font-weight:400; }
+.hero h1 em { color:var(--gold); font-style:normal; font-weight:bold; }
+.hero-sub {
+  font-size:1rem; color:rgba(255,255,255,0.72); margin-bottom:1.6rem;
+  letter-spacing:0.06em; line-height:1.8;
+}
 .hero-desc {
   font-size:0.95rem; line-height:2; color:rgba(255,255,255,0.65);
   max-width:480px; margin:0 auto 3rem;
@@ -398,7 +401,7 @@ footer a:hover { color:var(--gold); }
 
 /* ── RESPONSIVE ── */
 @media(max-width:768px) {
-  .hero h1 { font-size:clamp(1.4rem,6vw,2.6rem); letter-spacing:0.01em; }
+  .hero h1 { font-size:clamp(1.5rem,6.5vw,2.8rem); }
   .facts { grid-template-columns:repeat(2,1fr); }
   .cards { grid-template-columns:1fr; }
   .vid-grid { grid-template-columns:1fr; }
@@ -428,10 +431,9 @@ footer a:hover { color:var(--gold); }
 
 /* ── SUTRA CITATION ── */
 .sutra-tag {
-  display:inline-block; font-size:0.68rem; letter-spacing:0.24em;
-  color:rgba(200,169,110,0.65); margin-bottom:1.6rem;
-  font-family:var(--sans); font-style:normal; font-weight:400;
-  text-transform:uppercase;
+  display:inline-block; font-size:0.66rem; letter-spacing:0.2em;
+  color:rgba(200,169,110,0.5); margin-bottom:1.4rem;
+  font-family:var(--serif); font-style:italic; font-weight:400;
 }
 .hero-citation {
   margin-top:1.8rem; margin-bottom:2.4rem;
@@ -484,8 +486,9 @@ footer a:hover { color:var(--gold); }
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-        <div class="sutra-tag">Yoga Sūtra &nbsp;·&nbsp; II.47</div>
-    <h1>prayatna-śaithilya<br><em>ananta-samāpattibhyām</em></h1>
+    <div class="sutra-tag">prayatna-śaithilya · ananta-samāpattibhyām &nbsp;·&nbsp; 《瑜伽經》 II.47</div>
+    <h1>放下這份用力，<br><em>讓低空療愈接住你</em></h1>
+    <p class="hero-sub">忙了這麼久，你傀得一個真正放鬆的地方。</p>
     <div class="hero-citation">
       <p>放鬆一切用力，讓心融入無限，自然安穩。</p>
       <cite>《瑜伽經》Sādhana Pāda · 2.47 &nbsp;·&nbsp; 台北 · 低空瑜伽 · 小班制</cite>
